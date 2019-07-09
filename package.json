@@ -1,0 +1,28 @@
+{
+  "name": "barecss-power",
+  "version": "1.1.1",
+  "description": "A classless CSS framework (power) http://barecss.com",
+  "main": "css/bare.min.css",
+  "scripts": {
+    "test": "exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodef/barecss-power.git"
+  },
+  "keywords": [
+    "barecss",
+    "bare",
+    "css",
+    "power",
+    "classless",
+    "framework",
+    "merferry"
+  ],
+  "author": "wolfram77@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nodef/barecss-power/issues"
+  },
+  "homepage": "https://github.com/nodef/barecss-power#readme"
+}
