@@ -4,7 +4,6 @@
 ----------------------------------------------------------------------*/
 	
 	// sets the styling for tooltips
-
 [tt], [dtt]:disabled, [att] {
 	overflow: visible;
 	
@@ -39,17 +38,14 @@
 	
 	// sets the content for tooltip
 	// eg: <span data-tt="This is a tooltip"></span>
-
 [tt]:after { content: attr(tt) }
 
 	// sets the content for disabled tooltips
 	// can be used in conjunction with data-tt
 	// eg: <button disabled data-dtt="This button is disabled"></button>
-	
 [dtt]:disabled:after { content: attr(dtt) }
 
 	// sets the contents for an anchor link tooltip
 	// will set the content to the href
 	// eg: <a att href="https://github.com/longsien/BareCSS">BareCSS at GitHub</a>
-
 [att]:after { content: attr(href) }

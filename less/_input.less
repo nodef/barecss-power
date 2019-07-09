@@ -4,7 +4,6 @@
 ----------------------------------------------------------------------*/
 
 	// labels
-
 label@{n}, label@{x} {
 	display: inline-block;
 	width: 100%;
@@ -37,7 +36,6 @@ label@{n}, label@{x} {
 }
 
 	// text fields
-
 input:not([type=radio]):not([type=checkbox]):not([type=button]):not([type=submit]) {
 	&@{n}, &@{x} { .mx-input }
 }
@@ -53,7 +51,6 @@ textarea@{n}, textarea@{x} {
 
 
 	// select
-
 select@{n}, select@{x} {
 	padding: 0.5rem 3rem 0.5rem 1rem;
 	display: block;
@@ -79,7 +76,6 @@ select@{n}, select@{x} {
 
 
 	// radio and checkboxes
-
 input {
 	&[type=radio],
 	&[type=checkbox] {
@@ -93,7 +89,6 @@ input {
 			cursor: pointer;
 			
 			// note that the label must be placed after the radio or checkbox tag
-			
 			+ label {
 				width: auto;
 				text-transform: none;
@@ -128,7 +123,6 @@ input {
 	
 	// radio
 	// eg: <input type="radio" name="radio" id="radio-1"> <label for="radio-1">Select me</label>
-	
 	&[type=radio]@{n}, &[type=radio]@{x} {
 		+ label {
 			font-size: @fs-m;
@@ -158,7 +152,6 @@ input {
 	
 	// checkbox
 	// eg: <input type="checkbox" id="checkbox-1"> <label for="checkbox-1">Check me</label>
-	
 	&[type=checkbox]@{n}, &[type=checkbox]@{x} {
 		+ label {
 			font-size: @fs-m;

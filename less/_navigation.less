@@ -14,8 +14,7 @@ nav@{n}, nav@{x} {
 	
 	// class to fix the nav bar to the top of the viewport
 	// eg: <nav fx></nav>
-	
-	&[fx] {
+		&[fx] {
 		background: rgba(255,255,255,0.95);
 		position: fixed;
 		top: 0;
@@ -25,8 +24,7 @@ nav@{n}, nav@{x} {
 	}
 	
 	// contains everything in the nav
-	
-	label {
+		label {
 		max-width: @width;
 		margin: auto;
 		display: block;
@@ -35,8 +33,7 @@ nav@{n}, nav@{x} {
 	}
 	
 	// where the main navigation items live
-	
-	ul {
+		ul {
 		padding: 0 2rem;
 		margin: 0;
 		font-size: 0;
@@ -67,7 +64,6 @@ nav@{n}, nav@{x} {
 			font-weight: 300;
 			
 			// sets drop down menu styling
-			
 			@media (min-width: (@mobile + .1)) {
 				&:not(:only-child) {
 					background-image: data-uri('../icons/chevron-down.svg');
@@ -86,7 +82,6 @@ nav@{n}, nav@{x} {
 	}
 	
 	// drop down menu
-	
 	menu {
 		padding: 0;
 		margin: 0;
@@ -129,7 +124,6 @@ nav@{n}, nav@{x} {
 	
 	// where the title/logo lives in the nav bar
 	// contains the hamburger menu in mobile view
-	
 	header {
 		&:before,
 		&:after {
@@ -176,17 +170,14 @@ nav@{n}, nav@{x} {
 }
 
 // mobile view
-
 @media (max-width: @mobile) {
 	
 	// clears the top of the page for the fixed nav
-	
 	body {
 		padding-top: 4.4rem;
 	}
 	
 	// keeps the nav fixed
-	
 	nav@{n}, nav@{x} {
 		position: fixed;
 		padding: 0;
@@ -208,7 +199,6 @@ nav@{n}, nav@{x} {
 			height: 4.4rem;
 			
 			// hides the nav off screen
-			
 			> ul {
 				position: fixed;
 				top: 4.4rem;
@@ -238,13 +228,11 @@ nav@{n}, nav@{x} {
 				&:checked {
 					
 					// shows the nav when input is checked
-					
 					~ ul {
 						transform: none;
 					}
 					
 					// hides the hamburger and shows the cross when the input is checked
-					
 					~ header {
 						&:before {
 							transform: rotate(-180deg);
