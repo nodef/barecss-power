@@ -10,7 +10,7 @@ code {
 	border: 1px solid @grey-light;
 	padding: 0 0.5rem;
 	color: @grey-ultradark;
-	font-size: @fs-s;
+	font-size: @fs-s !important; // (not needed)
 	line-height: 1.8;
 	font-family: monospace;
 	border-radius: 2px;
@@ -22,9 +22,10 @@ pre {
 	code {
 		padding: 2rem;
 		border: none;
-		border-left: 4px solid @primary;
+		// border-left: 4px solid @primary; // (uncomment)
 		border-radius: 0;
 		width: 100%;
 		display: block;
+		overflow: scroll;
 	}
 }
