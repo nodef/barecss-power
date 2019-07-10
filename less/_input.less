@@ -4,7 +4,7 @@
 ----------------------------------------------------------------------*/
 
 	// labels
-label@{n}, label@{x} {
+label {
 	display: inline-block;
 	width: 100%;
 	text-transform: uppercase;
@@ -37,10 +37,10 @@ label@{n}, label@{x} {
 
 	// text fields
 input:not([type=radio]):not([type=checkbox]):not([type=button]):not([type=submit]) {
-	&@{n}, &@{x} { .mx-input }
+	& { .mx-input }
 }
 
-textarea@{n}, textarea@{x} {
+textarea {
 	.mx-input;
 	
 	min-height: 8rem;
@@ -51,7 +51,7 @@ textarea@{n}, textarea@{x} {
 
 
 	// select
-select@{n}, select@{x} {
+select {
 	padding: 0.5rem 3rem 0.5rem 1rem;
 	display: block;
 	width: 100%;
@@ -79,7 +79,7 @@ select@{n}, select@{x} {
 input {
 	&[type=radio],
 	&[type=checkbox] {
-		&@{n}, &@{x} {
+		& {
 			z-index: 2;
 			opacity: 0;
 			margin-right: -2rem;
@@ -123,7 +123,7 @@ input {
 	
 	// radio
 	// eg: <input type="radio" name="radio" id="radio-1"> <label for="radio-1">Select me</label>
-	&[type=radio]@{n}, &[type=radio]@{x} {
+	&[type=radio] {
 		+ label {
 			font-size: @fs-m;
 			font-weight: 200;
@@ -152,7 +152,7 @@ input {
 	
 	// checkbox
 	// eg: <input type="checkbox" id="checkbox-1"> <label for="checkbox-1">Check me</label>
-	&[type=checkbox]@{n}, &[type=checkbox]@{x} {
+	&[type=checkbox] {
 		+ label {
 			font-size: @fs-m;
 			font-weight: 200;
