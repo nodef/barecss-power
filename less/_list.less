@@ -1,26 +1,23 @@
 @import (reference) "_variables";
 
-/*	lists
+/*	list
 ----------------------------------------------------------------------*/
 
 
 ul, ol {
-	&@{n}, &@{x} {
+	& {
 		padding-left: 2rem;
 		margin: 0 0 2rem;
-		
 		ul, ol { margin-bottom: 0 }
 	}
 }
 
-ul@{n}, ul@{x} {
+ul {
 	list-style: disc;
-	
 	ul { list-style: circle }
 }
 
-ol@{n}, ol@{x} {
+ol {
 	list-style: decimal;
-	
 	ol { list-style: lower-alpha }
 }
