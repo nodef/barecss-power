@@ -8,11 +8,11 @@ button, input[type=submit], [btn] {
 	
 	// normal button styling
 	cursor: pointer;
-	color: @primary;
+	color: @acolor;
 	display: inline-block;
 	padding: 0.9em 1.2em;
 	background: #fff;
-	border: 1px solid @primary;
+	border: 1px solid @acolor;
 	border-radius: 2px;
 	box-shadow: 0 0 0 rgba(0,0,0,0);
 	text-transform: uppercase;
@@ -34,7 +34,7 @@ button, input[type=submit], [btn] {
 		left: 0;
 		top: 0;
 		transform: scale3d(1.2,1.2,1.2);
-		background: @primary;
+		background: @acolor;
 	}
 	
 	&:not(:disabled):hover {
@@ -49,12 +49,12 @@ button, input[type=submit], [btn] {
 	
 	// primary button styling
 	&[primary] {
-		border-color: darken(@primary, 6%);
-		background: @primary;
-		color: @primary--;
+		border-color: darken(@acolor, 6%);
+		background: @acolor;
+		color: @zcolor;
 		font-weight: 700;
 		
-		&:not(:disabled):hover { background: darken(@primary, 6%)	}
+		&:not(:disabled):hover { background: darken(@acolor, 6%)	}
 	}
 	
 	&[round] {
