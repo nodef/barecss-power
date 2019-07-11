@@ -1,6 +1,6 @@
 {
   "name": "barecss-power",
-  "version": "1.1.65",
+  "version": "1.1.66",
   "description": "A classless CSS framework (power) http://barecss.com",
   "main": "index.css",
   "scripts": {

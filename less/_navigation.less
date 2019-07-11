@@ -1,18 +1,22 @@
 @import (reference) "_variables";
 
 
+@cback: rgba(255,255,255,0.95);
+@ctext: black;
+@fmenu: 1.6rem;
+@cmenu_hover: @cpri;
+
+
 nav {
-	background: #fff;
-	color: @black;
-	padding: 0 2rem;
-	// border-bottom: 1px solid @acolor;
-	z-index: 10;
 	min-height: 8rem;
+	z-index: 10;
+	padding: 0 2rem;
+	background: @cback;
+	color: @ctext;
 	
-	// class to fix the nav bar to the top of the viewport
+	// fix to top?
 	// eg: <nav fx></nav>
 	&[fx] {
-		background: rgba(255,255,255,0.95);
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -22,42 +26,38 @@ nav {
 	
 	// contains everything in the nav
 	label {
-		// max-width: @width;
-		// margin: auto;
 		display: block;
-		
 		> input { display: none }
 	}
 	
 	// where the main navigation items live
 	ul {
-		padding: 0 2rem;
 		margin: 0;
+		padding: 0 2rem;
 		font-size: 0;
 		text-align: right;
 				
 		li {
 			display: inline-block;
-			font-size: @fs-l;
+			font-size: @fmenu;
 		}
 		
 		@media (min-width: (@mobile + .1)) {
-			li:hover menu,
-			menu:hover {
+			li:hover menu, menu:hover {
+				pointer-events: auto;
+				transform: translate3d(0,-1rem,0);
 				visibility: visible;
 				opacity: 1;
-				transform: translate3d(0,-1rem,0);
-				pointer-events: auto;
 			}
 		}
 		
 		a {
+			cursor: pointer;
+			display: block;
+			border-bottom: 4px solid transparent;
+			padding: 0.8rem 2rem 0.4rem;
 			text-decoration: none;
 			text-transform: none;
-			padding: 0.8rem 2rem 0.4rem;
-			border-bottom: 4px solid transparent;
-			display: block;
-			cursor: pointer;
 			font-weight: 300;
 			
 			// sets drop down menu styling
@@ -72,31 +72,31 @@ nav {
 			}
 			
 			&:hover {
-				color: @acolor;
-				border-color: @acolor;
+				color: @cmenu_hover;
+				border-color: @cmenu_hover;
 			}
 		}
 	}
 	
 	// drop down menu
 	menu {
-		padding: 0;
-		margin: 0;
-		background: #fff;
-		z-index: 2;
-		text-align: left;
-		white-space: nowrap;
 		min-width: 100%;
+		z-index: 2;
+		margin: 0;
+		padding: 0;
+		background: #fff;
+		white-space: nowrap;
+		text-align: left;
 		
 		@media (min-width: (@mobile + .1)) {
-			visibility: hidden;
-			opacity: 0;
+			pointer-events: none;
 			position: absolute;
 			top: 100%;
 			left: 0;
-			box-shadow: @box-shadow;
 			transform: translate3d(0,-2rem,0);
-			pointer-events: none;
+			visibility: hidden;
+			opacity: 0;
+			box-shadow: @box-shadow;
 		}
 		
 		menuitem {
@@ -106,14 +106,13 @@ nav {
 			&:hover {
 				border-color: @acolor;
 				background-color: @grey-ultralight;
-				
 				a { transform: translate3d(0.5rem,0,0) }
 			}
 			
 			a {
-				text-transform: none;
-				padding: 0.5rem 2rem 0.5rem 1.6rem;
 				border: none;
+				padding: 0.5rem 2rem 0.5rem 1.6rem;
+				text-transform: none;
 				font-size: @fs-s;
 			}
 		}
@@ -125,12 +124,12 @@ nav {
 		&:before,
 		&:after {
 			content: "";
+			display: none;
 			position: absolute;
 			top: 0;
 			right: 1rem;
 			width: 8rem;
 			height: 8rem;
-			display: none;
 			background-size: 4rem;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -141,26 +140,26 @@ nav {
 		}
 		
 		&:after {
-			background-image: data-uri('../icons/close.svg');
-			opacity: 0;
 			transform: rotate(180deg);
+			opacity: 0;
+			background-image: data-uri('../icons/close.svg');
 		}
 		
 		a {
+			cursor: pointer;
 			position: absolute;
 			left: 2rem;
 			top: 1rem;
 			bottom: 1rem;
-			cursor: pointer;
 			z-index: 2;
 			font-size: @fs-l;
 			text-decoration: none;
 			
 			img {
-				height: 4rem;
-				vertical-align: middle;
 				top: -1px;
+				height: 4rem;
 				margin-right: 1rem;
+				vertical-align: middle;
 			}
 		}
 	}
@@ -177,10 +176,10 @@ nav {
 	// keeps the nav fixed
 	nav {
 		position: fixed;
-		padding: 0;
 		top: 0;
 		left: 0;
 		right: 0;
+		padding: 0;
 		
 		header {
 			position: absolute;
@@ -188,7 +187,6 @@ nav {
 			left: 0;
 			right: 0;
 			bottom: 0;
-			
 			&:before, &:after { display: block }
 		}
 		
@@ -201,14 +199,14 @@ nav {
 				top: 8rem;
 				right: 0;
 				bottom: 0;
-				padding: 0;
 				transform: translate3d(100%,0,0);
 				border-top: 1px solid @acolor;
-				text-align: left;
-				background: #fff;
+				padding: 0;
 				box-shadow: @box-shadow;
+				background: #fff;
 				overflow-x: visible;
 				overflow-y: auto;
+				text-align: left;
 				
 				li {
 					display: block;
@@ -216,8 +214,8 @@ nav {
 				}
 				
 				a {
-					padding: 1rem 6rem 1rem 2rem;
 					border: none;
+					padding: 1rem 6rem 1rem 2rem;
 				}
 			}
 						
@@ -225,9 +223,7 @@ nav {
 				&:checked {
 					
 					// shows the nav when input is checked
-					~ ul {
-						transform: none;
-					}
+					~ ul { transform: none; }
 					
 					// hides the hamburger and shows the cross when the input is checked
 					~ header {
@@ -245,13 +241,8 @@ nav {
 			}
 			
 			menu {
-				menuitem {
-					border-color: @grey-light;
-				}
-				
-				a {
-					padding-left: 4rem;
-				}
+				menuitem { border-color: @grey-light;	}
+				a { padding-left: 4rem;	}
 			}
 		}
 	}
