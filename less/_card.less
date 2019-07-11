@@ -8,13 +8,13 @@
 card {
 	background: #fff;
 	display: block;
-	padding: 2rem;
+	padding: 1.2em;
 	box-shadow: @box-shadow;
 	border-radius: 2px;
-	margin-bottom: 2rem;
+	margin-bottom: 1.2em;
 	
 	hr {
-		margin: 1rem 0;
+		margin: 0.6em 0;
 	}
 	
 	&:last-child { margin-bottom: 0 }
@@ -23,19 +23,19 @@ card {
 	> img {
 		width: ~"calc(100% + 4rem)";
 		max-width: none;
-		margin: 0 0 2rem -2rem;
+		margin: 0 0 1.2em -1.2em;
 		display: block;
 		
 		// applies if image is first item in card
 		&:first-child {
-			margin: -2rem 0 2rem -2rem;
+			margin: -1.2em 0 1.2em -1.2em;
 			border-top-left-radius: 2px;
 			border-top-right-radius: 2px;
 		}
 		
 		// applies if image is last item in card
 		&:last-child {
-			margin: 0 0 -2rem -2rem;
+			margin: 0 0 -1.2em -1.2em;
 			border-bottom-left-radius: 2px;
 			border-bottom-right-radius: 2px;
 		}
