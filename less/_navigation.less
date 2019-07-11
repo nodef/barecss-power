@@ -9,11 +9,12 @@
 @cmenu_hover: @cpri;
 
 
+@logo-size:  1.2em;
+@logo-hgap:  0.5em;
 @title-font: 3rem;
 
-@logo-size: 1.2em;
-@logo-gap: 	0.5em;
-
+@menu-font: 2.5rem;
+@menu-vgap: 0.4em;
 
 nav {
 	min-height: 8rem;
@@ -21,6 +22,7 @@ nav {
 	padding: 0 2rem;
 	background: @cback;
 	color: @ctext;
+	//X vertical-align: center;
 	font-size: @fnav;
 	
 	// fix to top?
@@ -43,12 +45,13 @@ nav {
 	ul {
 		margin: 0;
 		padding: 0 2rem;
-		font-size: 0;
+		// font-size: 0;
 		text-align: right;
 				
 		li {
+			padding: @menu-vgap 0;
 			display: inline-block;
-			font-size: @fmenu;
+			font-size: @menu-font;
 		}
 		
 		@media (min-width: (@mobile + .1)) {
@@ -158,8 +161,8 @@ nav {
 			// cursor: pointer;
 			// Q> will padding work here?
 			position: absolute;
-			left: 2rem;
-			top: 1rem;
+			left: 0.6em;
+			top: @menu-vgap;
 			// bottom: 1rem;
 			// z-index: 2;
 			font-size: @title-font;
@@ -169,7 +172,7 @@ nav {
 			img {
 				top: -2px;
 				height: @logo-size;
-				margin-right: @logo-gap;
+				margin-right: @logo-hgap;
 				vertical-align: middle;
 			}
 		}
