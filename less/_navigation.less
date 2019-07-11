@@ -1,10 +1,18 @@
 @import (reference) "_variables";
 
 
-@cback: rgba(255,255,255,0.95);
+@cback: rgba(255,255,0,0.95);
 @ctext: black;
+@fnav: 	3rem;
+
 @fmenu: 1.6rem;
 @cmenu_hover: @cpri;
+
+
+@title-font: 3rem;
+
+@logo-size: 1.2em;
+@logo-gap: 	0.5em;
 
 
 nav {
@@ -13,6 +21,7 @@ nav {
 	padding: 0 2rem;
 	background: @cback;
 	color: @ctext;
+	font-size: @fnav;
 	
 	// fix to top?
 	// eg: <nav fx></nav>
@@ -121,8 +130,7 @@ nav {
 	// where the title/logo lives in the nav bar
 	// contains the hamburger menu in mobile view
 	header {
-		&:before,
-		&:after {
+		&:before, &:after {
 			content: "";
 			display: none;
 			position: absolute;
@@ -145,20 +153,23 @@ nav {
 			background-image: data-uri('../icons/close.svg');
 		}
 		
+		// @title
 		a {
-			cursor: pointer;
+			// cursor: pointer;
+			// Q> will padding work here?
 			position: absolute;
 			left: 2rem;
 			top: 1rem;
-			bottom: 1rem;
-			z-index: 2;
-			font-size: @fs-l;
+			// bottom: 1rem;
+			// z-index: 2;
+			font-size: @title-font;
 			text-decoration: none;
 			
+			// @logo
 			img {
-				top: -1px;
-				height: 4rem;
-				margin-right: 1rem;
+				top: -2px;
+				height: @logo-size;
+				margin-right: @logo-gap;
 				vertical-align: middle;
 			}
 		}
