@@ -3,25 +3,25 @@
 
 code {
   display: inline-block;
-  background: @grey-ultralight;
   border: 1px solid @grey-light;
-  padding: 0 0.4em;
-  color: @grey-ultradark;
-  font-size: @fs-s !important; // (not needed)
-  line-height: 1.8;
-  font-family: monospace;
   border-radius: 2px;
-  text-transform: none;
+  padding: 0 0.4em;
+  background: @grey-ultralight;
+  font-family: monospace;
+  font-size: @fs-s !important; // (not needed)
   font-weight: 300;
+  line-height: 1.8;
+  color: @grey-ultradark;
+  text-transform: none;
 }
 
 pre {
   code {
-    padding: 1.2em;
+    display: block;
+    width: 100%;
     border: none;
     // border-left: 4px solid @acolor; // (uncomment)
     border-radius: 0;
-    width: 100%;
-    display: block;
+    padding: 1.2em;
   }
 }

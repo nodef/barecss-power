@@ -3,25 +3,23 @@
 
   // eg: <div class="card"></div>
 card {
-  background: #fff;
   display: block;
-  padding: 1.2em;
+  margin-bottom: 1.2em;
   box-shadow: @box-shadow;
   border-radius: 2px;
-  margin-bottom: 1.2em;
+  padding: 1.2em;
+  background: #fff;
   
-  hr {
-    margin: 0.6em 0;
-  }
+  hr { margin: 0.6em 0; }
   
   &:last-child { margin-bottom: 0 }
   
   // sets the image to full width
   > img {
+    display: block;
     width: ~"calc(100% + 4rem)";
     max-width: none;
     margin: 0 0 1.2em -1.2em;
-    display: block;
     
     // applies if image is first item in card
     &:first-child {

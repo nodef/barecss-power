@@ -5,9 +5,9 @@
 // eg: <div class="grid"><div class="col twelve"></div></div>
 grid {
   display: block;
-  font-size: 0;
   width: auto;
   margin: -1rem;
+  font-size: 0;
   
   grid:not(:first-child) { margin: 1rem -1rem 0 }
 }
@@ -57,8 +57,8 @@ grid {
 
 [col] {
   display: inline-block;
-  font-size: @fs-m;
   padding: 1rem;
+  font-size: @fs-m;
   vertical-align: top;
     
   // columns go to 100% on @mobile width unless it has the .fx class

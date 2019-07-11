@@ -2,19 +2,19 @@
 
 
 footer {
-  color: @zcolor;
   width: 100%;
   padding: 1.1em;
+  color: @zcolor;
   overflow: hidden;
   
   &:before {
     content: "";
-    background: @acolor;
+    position: absolute;
+    top: 0;
+    left: 50%;
     width: 102vw;
     height: 100%;
-    position: absolute;
-    left: 50%;
-    top: 0;
     transform: translate(-50%,0);
+    background: @acolor;
   }
 }

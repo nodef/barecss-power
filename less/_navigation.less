@@ -21,9 +21,9 @@ nav {
   z-index: 10;
   padding: 0 2rem;
   background: @cback;
+  font-size: @fnav;
   color: @ctext;
   //X vertical-align: center;
-  font-size: @fnav;
   
   // fix to top?
   // eg: <nav fx></nav>
@@ -68,18 +68,18 @@ nav {
       border-bottom: 4px solid transparent;
       // padding: 0.8rem 2rem 0.4rem;
       padding: @menu-vgap 2rem @menu-vgap;
+      font-weight: 300;
       text-decoration: none;
       text-transform: none;
-      font-weight: 300;
       
       // sets drop down menu styling
       @media (min-width: (@mobile + .1)) {
         &:not(:only-child) {
+          padding-right: 3rem;
           background-image: data-uri('../icons/chevron-down.svg');
           background-repeat: no-repeat;
           background-position: right 0.8em;
           background-size: 1em;
-          padding-right: 3rem;
         }
       }
       
@@ -124,8 +124,8 @@ nav {
       a {
         border: none;
         padding: 0.5rem 2rem 0.5rem 1.6rem;
-        text-transform: none;
         font-size: @menus-font;
+        text-transform: none;
       }
     }
   }
@@ -161,9 +161,9 @@ nav {
       // cursor: pointer;
       // Q> will padding work here?
       position: absolute;
-      left: 0.6em;
       top: @menu-vgap;
       // bottom: 1rem;
+      left: 0.6em;
       // z-index: 2;
       font-size: @title-font;
       text-decoration: none;
@@ -198,9 +198,9 @@ nav {
     header {
       position: absolute;
       top: 0;
+      bottom: 0;
       left: 0;
       right: 0;
-      bottom: 0;
       &:before, &:after { display: block }
     }
     
@@ -211,12 +211,12 @@ nav {
       > ul {
         position: fixed;
         top: 8rem;
-        right: 0;
         bottom: 0;
+        right: 0;
         transform: translate3d(100%,0,0);
+        box-shadow: @box-shadow;
         border-top: 1px solid @acolor;
         padding: 0;
-        box-shadow: @box-shadow;
         background: @menus-bcolor;
         overflow-x: visible;
         overflow-y: auto;
