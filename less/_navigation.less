@@ -5,16 +5,16 @@
 @ctext: black;
 @fnav: 	3rem;
 
-@fmenu: 1.6rem;
-@cmenu_hover: @cpri;
-
-
 @logo-size:  1.2em;
 @logo-hgap:  0.5em;
 @title-font: 3rem;
 
-@menu-font: 2.5rem;
+@menu-font: 3rem;
 @menu-vgap: 0.4em;
+@menu-hover: @csec;
+
+@menus-bcolor: darken(@cback, 20%);
+@menus-font:   2rem;
 
 nav {
   min-height: 8rem;
@@ -49,7 +49,6 @@ nav {
     text-align: right;
         
     li {
-      padding: @menu-vgap 0;
       display: inline-block;
       font-size: @menu-font;
     }
@@ -67,7 +66,8 @@ nav {
       cursor: pointer;
       display: block;
       border-bottom: 4px solid transparent;
-      padding: 0.8rem 2rem 0.4rem;
+      // padding: 0.8rem 2rem 0.4rem;
+      padding: @menu-vgap 2rem @menu-vgap;
       text-decoration: none;
       text-transform: none;
       font-weight: 300;
@@ -84,8 +84,8 @@ nav {
       }
       
       &:hover {
-        color: @cmenu_hover;
-        border-color: @cmenu_hover;
+        border-color: @menu-hover;
+        color: @menu-hover;
       }
     }
   }
@@ -96,7 +96,7 @@ nav {
     z-index: 2;
     margin: 0;
     padding: 0;
-    background: #fff;
+    background: @menus-bcolor;
     white-space: nowrap;
     text-align: left;
     
@@ -125,7 +125,7 @@ nav {
         border: none;
         padding: 0.5rem 2rem 0.5rem 1.6rem;
         text-transform: none;
-        font-size: @fs-s;
+        font-size: @menus-font;
       }
     }
   }
@@ -217,7 +217,7 @@ nav {
         border-top: 1px solid @acolor;
         padding: 0;
         box-shadow: @box-shadow;
-        background: #fff;
+        background: @menus-bcolor;
         overflow-x: visible;
         overflow-y: auto;
         text-align: left;
