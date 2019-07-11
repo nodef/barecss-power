@@ -1,5 +1,10 @@
 @import (reference) "_variables";
 
+
+@tt-back: @def-text;
+@tt-text: @def-back;
+@tt-font: 1.2rem;
+
   
   // sets the styling for tooltips
 [tt], [dtt]:disabled {
@@ -15,15 +20,15 @@
     visibility: hidden;
     opacity: 0;
     border-radius: 3px;
-    padding: 0 1rem;
-    background: @grey-ultradark;
+    padding: 0.5rem 1rem;
+    background: @tt-back;
     font-family: sans-serif;
-    font-size: @fs-s;
+    font-size: @tt-font;
     font-weight: 300;
-    line-height: 2.5;
-    color: #fff;
+    // line-height: 2.5;
+    color: @tt-text;
     text-transform: none;
-    letter-spacing: 0;
+    // letter-spacing: 0;
     white-space: nowrap;
   }
   
