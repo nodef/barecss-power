@@ -1,73 +1,77 @@
 @import (reference) "_variables";
 
 
+@norm-color:  @acolor;
+@norm-back: #fff;
+
+
 button, input[type=submit], [btn] {
-	
-	// normal button styling
-	cursor: pointer;
-	color: @acolor;
-	display: inline-block;
-	padding: 0.9em 1.2em;
-	background: #fff;
-	border: 1px solid @acolor;
-	border-radius: 2px;
-	box-shadow: 0 0 0 rgba(0,0,0,0);
-	text-transform: uppercase;
-	text-decoration: none;
-	text-align: center;
-	font-size: @fs-s;
-	font-weight: 700;
-	line-height: 1rem;
-	margin: 0 0.6em 0.6em 0;
-	-webkit-appearance: none;
-	
-	&:before {
-		content: "";
-		position: absolute;
-		z-index: -1;
-		opacity: 0;
-		width: 100%;
-		height: 100%;
-		left: 0;
-		top: 0;
-		transform: scale3d(1.2,1.2,1.2);
-		background: @acolor;
-	}
-	
-	&:not(:disabled):hover {
-		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-		background: @grey-ultralight;
-		
-		&:active {
-			box-shadow: none;
-			transition: none;
-		}
-	}
-	
-	// primary button styling
-	&[primary] {
-		border-color: darken(@acolor, 6%);
-		background: @acolor;
-		color: @zcolor;
-		font-weight: 700;
-		
-		&:not(:disabled):hover { background: darken(@acolor, 6%)	}
-	}
-	
-	&[round] {
-		border-radius: 2.4em;
-	}
-	
-	&[m-full] {
-		@media (max-width: @mobile) { width: 100% }
-	}
-	
-	// disabled button styling
-	&:disabled,
-	&.disabled {
-		border-color: @grey-light;
-		background: @grey-light;
-		color: @grey-mid;
-		cursor: default;
-	}
+  
+  // normal button styling
+  cursor: pointer;
+  color: @acolor;
+  display: inline-block;
+  padding: 0.9em 1.2em;
+  background: @norm-back;
+  border: 1px solid @acolor;
+  border-radius: 2px;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-size: @fs-s;
+  font-weight: 700;
+  line-height: 1rem;
+  margin: 0 0.6em 0.6em 0;
+  -webkit-appearance: none;
+  
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: scale3d(1.2,1.2,1.2);
+    background: @acolor;
+  }
+  
+  &:not(:disabled):hover {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    background: @grey-ultralight;
+    
+    &:active {
+      box-shadow: none;
+      transition: none;
+    }
+  }
+  
+  // primary button styling
+  &[primary] {
+    border-color: darken(@acolor, 6%);
+    background: @acolor;
+    color: @zcolor;
+    font-weight: 700;
+    
+    &:not(:disabled):hover { background: darken(@acolor, 6%)	}
+  }
+  
+  &[round] {
+    border-radius: 2.4em;
+  }
+  
+  &[m-full] {
+    @media (max-width: @mobile) { width: 100% }
+  }
+  
+  // disabled button styling
+  &:disabled,
+  &.disabled {
+    border-color: @grey-light;
+    background: @grey-light;
+    color: @grey-mid;
+    cursor: default;
+  }
 }

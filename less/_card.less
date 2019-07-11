@@ -1,40 +1,40 @@
 @import (reference) "_variables";
 
 
-	// eg: <div class="card"></div>
+  // eg: <div class="card"></div>
 card {
-	background: #fff;
-	display: block;
-	padding: 1.2em;
-	box-shadow: @box-shadow;
-	border-radius: 2px;
-	margin-bottom: 1.2em;
-	
-	hr {
-		margin: 0.6em 0;
-	}
-	
-	&:last-child { margin-bottom: 0 }
-	
-	// sets the image to full width
-	> img {
-		width: ~"calc(100% + 4rem)";
-		max-width: none;
-		margin: 0 0 1.2em -1.2em;
-		display: block;
-		
-		// applies if image is first item in card
-		&:first-child {
-			margin: -1.2em 0 1.2em -1.2em;
-			border-top-left-radius: 2px;
-			border-top-right-radius: 2px;
-		}
-		
-		// applies if image is last item in card
-		&:last-child {
-			margin: 0 0 -1.2em -1.2em;
-			border-bottom-left-radius: 2px;
-			border-bottom-right-radius: 2px;
-		}
-	}
+  background: #fff;
+  display: block;
+  padding: 1.2em;
+  box-shadow: @box-shadow;
+  border-radius: 2px;
+  margin-bottom: 1.2em;
+  
+  hr {
+    margin: 0.6em 0;
+  }
+  
+  &:last-child { margin-bottom: 0 }
+  
+  // sets the image to full width
+  > img {
+    width: ~"calc(100% + 4rem)";
+    max-width: none;
+    margin: 0 0 1.2em -1.2em;
+    display: block;
+    
+    // applies if image is first item in card
+    &:first-child {
+      margin: -1.2em 0 1.2em -1.2em;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+    }
+    
+    // applies if image is last item in card
+    &:last-child {
+      margin: 0 0 -1.2em -1.2em;
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+  }
 }

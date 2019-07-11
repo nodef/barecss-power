@@ -4,19 +4,19 @@
 // .grid acts as a container for .col
 // eg: <div class="grid"><div class="col twelve"></div></div>
 grid {
-	display: block;
-	font-size: 0;
-	width: auto;
-	margin: -1rem;
-	
-	grid:not(:first-child) { margin: 1rem -1rem 0 }
+  display: block;
+  font-size: 0;
+  width: auto;
+  margin: -1rem;
+  
+  grid:not(:first-child) { margin: 1rem -1rem 0 }
 }
 
 // columns
 @columns: 12;
-	
+  
 .width(@x) {
-	width: 100% / @columns * @x;
+  width: 100% / @columns * @x;
 }
 
 // eg: <div col="6"></div>
@@ -56,14 +56,14 @@ grid {
 [col="1/1"]			{ .width(12) }
 
 [col] {
-	display: inline-block;
-	font-size: @fs-m;
-	padding: 1rem;
-	vertical-align: top;
-		
-	// columns go to 100% on @mobile width unless it has the .fx class
-	// eg: <div class="fx" col="six"></div>
-	@media (max-width: @mobile) {
-		&:not([fx]) { width: 100% }
-	}
+  display: inline-block;
+  font-size: @fs-m;
+  padding: 1rem;
+  vertical-align: top;
+    
+  // columns go to 100% on @mobile width unless it has the .fx class
+  // eg: <div class="fx" col="six"></div>
+  @media (max-width: @mobile) {
+    &:not([fx]) { width: 100% }
+  }
 }

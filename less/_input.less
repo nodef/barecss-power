@@ -1,184 +1,184 @@
 @import (reference) "_variables";
 
 
-	// labels
+  // labels
 label {
-	display: inline-block;
-	width: 100%;
-	text-transform: uppercase;
-	font-size: @fs-s;
-	font-weight: 400;
-	margin-top: 0.6em;
-	
-	&:first-child { margin-top: 0 }
+  display: inline-block;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: @fs-s;
+  font-weight: 400;
+  margin-top: 0.6em;
+  
+  &:first-child { margin-top: 0 }
 }
 
 .mx-input() {
-	display: inline-block;
-	background: transparent;
-	width: 100%;
-	padding: 0.3em 0 0.6em;
-	margin-bottom: 1.2em;
-	border: none;
-	border-bottom: 1px solid @grey-light;
-	font-size: @fs-m;
-	font-weight: 300;
-	border-radius: 0;
-	
-	&:focus,
-	&:hover {
-		color: @acolor;
-		border-color: @acolor;
-		outline: 0;
-	}
+  display: inline-block;
+  background: transparent;
+  width: 100%;
+  padding: 0.3em 0 0.6em;
+  margin-bottom: 1.2em;
+  border: none;
+  border-bottom: 1px solid @grey-light;
+  font-size: @fs-m;
+  font-weight: 300;
+  border-radius: 0;
+  
+  &:focus,
+  &:hover {
+    color: @acolor;
+    border-color: @acolor;
+    outline: 0;
+  }
 }
 
-	// text fields
+  // text fields
 input:not([type=radio]):not([type=checkbox]):not([type=button]):not([type=submit]) {
-	& { .mx-input }
+  & { .mx-input }
 }
 
 textarea {
-	.mx-input;
-	
-	min-height: 4.8em;
-	border-right: 1px solid @grey-light;
-	padding-right: 1.2em;
-	border-bottom-right-radius: 0.3em;
+  .mx-input;
+  
+  min-height: 4.8em;
+  border-right: 1px solid @grey-light;
+  padding-right: 1.2em;
+  border-bottom-right-radius: 0.3em;
 }
 
 
-	// select
+  // select
 select {
-	padding: 0.3em 1.8em 0.3em 0.6em;
-	display: block;
-	width: 100%;
-	border: 1px solid @grey-light;
-	background: #fff data-uri('../icons/chevron-down.svg') no-repeat right 0.6em center;
-	background-size: 1.2em;
-	border-radius: 2px;
-	height: 2.4em;
-	font-size: @fs-m;
-	font-weight: 300;
-	text-indent: 0.3em;
-	margin: 0.3em 0 1.2em;
-	appearance: none;
-	cursor: pointer;
-	
-	&:focus,
-	&:hover {
-		border-color: @acolor;
-		outline: 0;
-	}
+  padding: 0.3em 1.8em 0.3em 0.6em;
+  display: block;
+  width: 100%;
+  border: 1px solid @grey-light;
+  background: #fff data-uri('../icons/chevron-down.svg') no-repeat right 0.6em center;
+  background-size: 1.2em;
+  border-radius: 2px;
+  height: 2.4em;
+  font-size: @fs-m;
+  font-weight: 300;
+  text-indent: 0.3em;
+  margin: 0.3em 0 1.2em;
+  appearance: none;
+  cursor: pointer;
+  
+  &:focus,
+  &:hover {
+    border-color: @acolor;
+    outline: 0;
+  }
 }
 
 
-	// radio and checkboxes
+  // radio and checkboxes
 input {
-	&[type=radio],
-	&[type=checkbox] {
-		& {
-			z-index: 2;
-			opacity: 0;
-			margin-right: -1.2em;
-			width: 1.2em;
-			height: 1.2em;
-			vertical-align: middle;
-			cursor: pointer;
-			
-			// note that the label must be placed after the radio or checkbox tag
-			+ label {
-				width: auto;
-				text-transform: none;
-				
-				&:before {
-					content: "";
-					display: inline-block;
-					width: 1.2em;
-					height: 1.2em;
-					border: 1px solid @grey-mid;
-					background: #fff;
-					vertical-align: middle;
-					margin-right: 0.6em;
-				}
-				
-				&:after {
-					content: "";
-					position: absolute;
-					opacity: 0;
-					visibility: hidden;
-					pointer-events: none;
-					width: 1.1em;
-					height: 1.1em;
-					left: 2px;
-					top: 4px;
-					transform: scale(0);
-				}
-			}
-		}
-	}
-	
-	
-	// radio
-	// eg: <input type="radio" name="radio" id="radio-1"> <label for="radio-1">Select me</label>
-	&[type=radio] {
-		+ label {
-			font-size: @fs-m;
-			font-weight: 200;
-			
-			&:before { border-radius: 100% }
-		}
-		
-		&:checked + label {
-			&:before {
-				background: @acolor;
-				border-color: @acolor;
-			}
-			
-			&:after {
-				opacity: 1;
-				visibility: visible;
-				background: @acolor;
-				border: 1px solid @zcolor;
-				border-radius: 100%;
-				transform: scale(1);
-				top: 0.3em;
-			}
-		}
-	}
-	
-	
-	// checkbox
-	// eg: <input type="checkbox" id="checkbox-1"> <label for="checkbox-1">Check me</label>
-	&[type=checkbox] {
-		+ label {
-			font-size: @fs-m;
-			font-weight: 200;
-			
-			&:before { border-radius: 2px }
-			
-			&:after {
-				background: data-uri('../icons/done.svg') no-repeat center center;
-				border-radius: 100%;
-				background-size: 100%;
-			}
-		}
-		
-		&:checked {
-			+ label {
-				&:before {
-					background: @acolor;
-					border-color: @acolor;
-				}
-				
-				&:after {
-					opacity: 1;
-					visibility: visible;
-					left: 2px;
-					top: 0.3em;
-					transform: scale(1);
-				}
-			}
-		}
-	}
+  &[type=radio],
+  &[type=checkbox] {
+    & {
+      z-index: 2;
+      opacity: 0;
+      margin-right: -1.2em;
+      width: 1.2em;
+      height: 1.2em;
+      vertical-align: middle;
+      cursor: pointer;
+      
+      // note that the label must be placed after the radio or checkbox tag
+      + label {
+        width: auto;
+        text-transform: none;
+        
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 1.2em;
+          height: 1.2em;
+          border: 1px solid @grey-mid;
+          background: #fff;
+          vertical-align: middle;
+          margin-right: 0.6em;
+        }
+        
+        &:after {
+          content: "";
+          position: absolute;
+          opacity: 0;
+          visibility: hidden;
+          pointer-events: none;
+          width: 1.1em;
+          height: 1.1em;
+          left: 2px;
+          top: 4px;
+          transform: scale(0);
+        }
+      }
+    }
+  }
+  
+  
+  // radio
+  // eg: <input type="radio" name="radio" id="radio-1"> <label for="radio-1">Select me</label>
+  &[type=radio] {
+    + label {
+      font-size: @fs-m;
+      font-weight: 200;
+      
+      &:before { border-radius: 100% }
+    }
+    
+    &:checked + label {
+      &:before {
+        background: @acolor;
+        border-color: @acolor;
+      }
+      
+      &:after {
+        opacity: 1;
+        visibility: visible;
+        background: @acolor;
+        border: 1px solid @zcolor;
+        border-radius: 100%;
+        transform: scale(1);
+        top: 0.3em;
+      }
+    }
+  }
+  
+  
+  // checkbox
+  // eg: <input type="checkbox" id="checkbox-1"> <label for="checkbox-1">Check me</label>
+  &[type=checkbox] {
+    + label {
+      font-size: @fs-m;
+      font-weight: 200;
+      
+      &:before { border-radius: 2px }
+      
+      &:after {
+        background: data-uri('../icons/done.svg') no-repeat center center;
+        border-radius: 100%;
+        background-size: 100%;
+      }
+    }
+    
+    &:checked {
+      + label {
+        &:before {
+          background: @acolor;
+          border-color: @acolor;
+        }
+        
+        &:after {
+          opacity: 1;
+          visibility: visible;
+          left: 2px;
+          top: 0.3em;
+          transform: scale(1);
+        }
+      }
+    }
+  }
 }

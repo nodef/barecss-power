@@ -248,25 +248,25 @@
 │	├── done.svg
 │	└── hamburger.svg
 └── less/
-	├── _anchor-link.less
-	├── _blockquote.less
-	├── _button.less
-	├── _card.less
-	├── _code.less
-	├── _footer.less
-	├── _grid.less
-	├── _input.less
-	├── _layout.less
-	├── _list.less
-	├── _navigation.less
-	├── _reset.less
-	├── _table.less
-	├── _tooltip.less
-	├── _transition.less
-	├── _typography.less
-	├── _utility-attributes.less
-	├── _variables.less
-	└── bare.less
+  ├── _anchor-link.less
+  ├── _blockquote.less
+  ├── _button.less
+  ├── _card.less
+  ├── _code.less
+  ├── _footer.less
+  ├── _grid.less
+  ├── _input.less
+  ├── _layout.less
+  ├── _list.less
+  ├── _navigation.less
+  ├── _reset.less
+  ├── _table.less
+  ├── _tooltip.less
+  ├── _transition.less
+  ├── _typography.less
+  ├── _utility-attributes.less
+  ├── _variables.less
+  └── bare.less
 </code></pre>
 <!-- /code -----------------------------------------------------// -->
     </div>
@@ -291,32 +291,32 @@
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- add the fx attribute to the nav if you want it fixed to the top -->
 <nav>
-	<!-- this label allows the checkbox to be activated by clicking anywhere in the nav -->
-	<label>
-		<!-- checkbox required for responsiven menu -->
-		<input type="checkbox">
-		
-		<!-- bareCSS will use the header to contain the hamburger menu -->
-		<header>
-			<!-- you can leave this empty if you don't want a title -->
-			<a><img src="http://barecss.com/img/bareCSS.svg"> Title</a>
-		</header>
-		
-		<!-- the main navigation items are anchor links within an unordered list -->
-		<ul>
-			<li><a href="http://barecss.com/index.html">Home</a></li>
-			<li><a href="http://barecss.com/about.html">About</a></li>
-			<li>
-				<a>Dropdown</a>
-				
-				<!-- use <menu> and <menuitem> within an <li> for dropdowns -->
-				<menu>
-					<menuitem><a href="#">Item one</a></menuitem>
-					<menuitem><a href="#">Item two</a></menuitem>
-				</menu>
-			</li>
-		</ul>
-	</label>
+  <!-- this label allows the checkbox to be activated by clicking anywhere in the nav -->
+  <label>
+    <!-- checkbox required for responsiven menu -->
+    <input type="checkbox">
+    
+    <!-- bareCSS will use the header to contain the hamburger menu -->
+    <header>
+      <!-- you can leave this empty if you don't want a title -->
+      <a><img src="http://barecss.com/img/bareCSS.svg"> Title</a>
+    </header>
+    
+    <!-- the main navigation items are anchor links within an unordered list -->
+    <ul>
+      <li><a href="http://barecss.com/index.html">Home</a></li>
+      <li><a href="http://barecss.com/about.html">About</a></li>
+      <li>
+        <a>Dropdown</a>
+        
+        <!-- use <menu> and <menuitem> within an <li> for dropdowns -->
+        <menu>
+          <menuitem><a href="#">Item one</a></menuitem>
+          <menuitem><a href="#">Item two</a></menuitem>
+        </menu>
+      </li>
+    </ul>
+  </label>
 </nav></code></pre>
 <!-- /code -----------------------------------------------------// -->
 
@@ -340,7 +340,7 @@
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- use sections to quickly and easily contian content -->
 <section>
-	Your code here.
+  Your code here.
 </section></code></pre>
 <!-- /code -----------------------------------------------------// -->
 
@@ -657,8 +657,8 @@
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- select and option -->
 <select>
-	<option disabled selected>Select an option</option>
-	<option>Option One</option>
+  <option disabled selected>Select an option</option>
+  <option>Option One</option>
 </select>
 
 <!-- checkbox -->
@@ -716,11 +716,11 @@ Code line 3</code></pre>
 
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><blockquote>
-	<p>Quote goes here.</p>
-	
-	<p txt="r">
-		<i>- Said Someone</i>
-	</p>
+  <p>Quote goes here.</p>
+  
+  <p txt="r">
+    <i>- Said Someone</i>
+  </p>
 </blockquote></code></pre>
 <!-- /code -----------------------------------------------------// -->
 
@@ -888,13 +888,13 @@ Code line 3</code></pre>
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- no need for rows, grid will act as both row and container -->
 <grid>
-	<div col="1/3"></div>
-	<div col="2/3"></div>
-	
-	<!-- new row -->
-	
-	<div col="1/2"></div>
-	<div col="1/2"></div>
+  <div col="1/3"></div>
+  <div col="2/3"></div>
+  
+  <!-- new row -->
+  
+  <div col="1/2"></div>
+  <div col="1/2"></div>
 </grid>
 </code></pre>
 <!-- /code -----------------------------------------------------// -->
@@ -928,8 +928,8 @@ Code line 3</code></pre>
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- adding fx to the col will retain width on mobile -->
 <grid>
-	<div fx col="5/12"></div>
-	<div fx col="7/12"></div>
+  <div fx col="5/12"></div>
+  <div fx col="7/12"></div>
 </grid>
 </code></pre>
 <!-- /code -----------------------------------------------------// -->
@@ -970,15 +970,15 @@ Code line 3</code></pre>
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- you can nest a grid inside a col -->
 <grid>
-	<div col="1/2"></div>
-	<div col="1/2">
+  <div col="1/2"></div>
+  <div col="1/2">
   <!-- nested grid -->
   <grid>
     <div col="1/1"></div>
     <div col="1/2"></div>
     <div col="1/2"></div>
   </grid>
-	</div>
+  </div>
 </grid>
 </code></pre>
 <!-- /code -----------------------------------------------------// -->
@@ -1000,13 +1000,13 @@ Code line 3</code></pre>
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- you can use a hr to separate cols -->
 <grid>
-	<div col="1/2"></div>
-	<div col="1/2"></div>
-	
-	<hr>
-	
-	<div col="1/2"></div>
-	<div col="1/2"></div>
+  <div col="1/2"></div>
+  <div col="1/2"></div>
+  
+  <hr>
+  
+  <div col="1/2"></div>
+  <div col="1/2"></div>
 </grid>
 </code></pre>
 <!-- /code -----------------------------------------------------// -->
@@ -1056,26 +1056,26 @@ Code line 3</code></pre>
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- card element -->
 <card>
-	<p>Your content</p>
+  <p>Your content</p>
  </card>
 
 <!-- card within a grid -->
 <grid>
-	<div col="1/2">
+  <div col="1/2">
   <card>
     <h5>Card title</h5>
     <hr>
     <p>Your content here</p>
   </card>
-	</div>
-	
-	<div col="1/2">
+  </div>
+  
+  <div col="1/2">
   <card>
     <h5>Card title</h5>
     <hr>
     <p>Your content here</p>
   </card>
-	</div>
+  </div>
 </grid></code></pre>
 <!-- /code -----------------------------------------------------// -->
 
@@ -1094,11 +1094,11 @@ Code line 3</code></pre>
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- image at the top -->
 <card>
-	<img src="http://barecss.com/img/sign.jpg" alt="sign">
-	
-	<h5>Title</h5>
-	
-	<p>Content goes here</p>
+  <img src="http://barecss.com/img/sign.jpg" alt="sign">
+  
+  <h5>Title</h5>
+  
+  <p>Content goes here</p>
 </card></code></pre>
 <!-- /code -----------------------------------------------------// -->
 
@@ -1114,11 +1114,11 @@ Code line 3</code></pre>
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- image in the middle -->
 <card>
-	<h5>Title</h5>
-	
-	<img src="http://barecss.com/img/sign.jpg" alt="sign">
-	
-	<p>Content goes here</p>
+  <h5>Title</h5>
+  
+  <img src="http://barecss.com/img/sign.jpg" alt="sign">
+  
+  <p>Content goes here</p>
 </card></code></pre>
 <!-- /code -----------------------------------------------------// -->
 
@@ -1134,11 +1134,11 @@ Code line 3</code></pre>
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- image at the bottom -->
 <card>
-	<h5>Title</h5>
-	
-	<p>Content goes here</p>
-	
-	<img src="http://barecss.com/img/sign.jpg" alt="sign">
+  <h5>Title</h5>
+  
+  <p>Content goes here</p>
+  
+  <img src="http://barecss.com/img/sign.jpg" alt="sign">
 </card></code></pre>
 <!-- /code -----------------------------------------------------// -->
     </div>
@@ -1225,7 +1225,7 @@ Code line 3</code></pre>
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- margin top 2rem + margin bottom 4rem -->
 <div mt="2" mb="4"></div>
-	
+  
 <!-- padding all 2rem -->
 <p pa="2"></p>
 
@@ -1249,17 +1249,17 @@ Code line 3</code></pre>
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- the footer background will expand to 100% of viewport but contents will be contained to standard width -->
 <footer>
-	<grid>
-		<div col="1/2">
-			<p>Created by <a att href="http://www.longsien.com" target="_blank">Long Sien</a></p>
-		</div>
-		
-		<div col="1/2" txt="r">
-			<a att href="https://github.com/longsien/BareCSS" target="_blank">
-				<img class="github-icon" src="http://barecss.com/img/github.svg">
-			</a>
-		</div>
-	</grid>
+  <grid>
+    <div col="1/2">
+      <p>Created by <a att href="http://www.longsien.com" target="_blank">Long Sien</a></p>
+    </div>
+    
+    <div col="1/2" txt="r">
+      <a att href="https://github.com/longsien/BareCSS" target="_blank">
+        <img class="github-icon" src="http://barecss.com/img/github.svg">
+      </a>
+    </div>
+  </grid>
 </footer></code></pre>
 <!-- /code -----------------------------------------------------// -->
 </section>

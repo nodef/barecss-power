@@ -1,44 +1,44 @@
 @import (reference) "_variables";
 
-	
-	// sets the styling for tooltips
+  
+  // sets the styling for tooltips
 [tt], [dtt]:disabled {
-	overflow: visible;
-	
-	&:after {
-		pointer-events: none;
-		position: absolute;
-		top: 0;
-		left: 50%;
-		z-index: 2;
-		transform: translate(-50%,-95%);
-		visibility: hidden;
-		opacity: 0;
-		color: #fff;
-		background: @grey-ultradark;
-		font-family: sans-serif;
-		font-size: @fs-s;
-		font-weight: 300;
-		letter-spacing: 0;
-		white-space: nowrap;
-		text-transform: none;
-		line-height: 2.5;
-		padding: 0 1rem;
-		border-radius: 3px;
-	}
-	
-	&:hover:after {
-		transform: translate(-50%,~"calc(-100% - 5px)");
-		visibility: visible;
-		opacity: 0.9;
-	}
+  overflow: visible;
+  
+  &:after {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%,-95%);
+    visibility: hidden;
+    opacity: 0;
+    color: #fff;
+    background: @grey-ultradark;
+    font-family: sans-serif;
+    font-size: @fs-s;
+    font-weight: 300;
+    letter-spacing: 0;
+    white-space: nowrap;
+    text-transform: none;
+    line-height: 2.5;
+    padding: 0 1rem;
+    border-radius: 3px;
+  }
+  
+  &:hover:after {
+    transform: translate(-50%,~"calc(-100% - 5px)");
+    visibility: visible;
+    opacity: 0.9;
+  }
 }
-	
-	// sets the content for tooltip
-	// eg: <span tt="This is a tooltip"></span>
+  
+  // sets the content for tooltip
+  // eg: <span tt="This is a tooltip"></span>
 [tt]:after { content: attr(tt) }
 
-	// sets the content for disabled tooltips
-	// can be used in conjunction with tt
-	// eg: <button disabled dtt="This button is disabled"></button>
+  // sets the content for disabled tooltips
+  // can be used in conjunction with tt
+  // eg: <button disabled dtt="This button is disabled"></button>
 [dtt]:disabled:after { content: attr(dtt) }
