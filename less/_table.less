@@ -1,6 +1,11 @@
 @import (reference) "_variables";
 
 
+@head-color: @def-text;
+@head-back:  darken(@def-back, 10%);
+@row-border: darken(@def-back, 10%);
+@row-hover:  darken(@def-back, 10%);
+
 table {
   width: 100%;
   margin-bottom: 1.1em;
@@ -10,13 +15,13 @@ table {
   overflow: hidden;
   
   th, td {
-    border-bottom: 2px solid @grey-light;
+    border-bottom: 2px solid @row-border;
     padding: 0.8em;
   }
   
   th {
     font-weight: 700;
-    color: @grey-ultradark;
+    color: @head-color;
     
     &:before {
       content: "";
@@ -29,7 +34,7 @@ table {
       height: 100%;
       visibility: hidden;
       opacity: 0;
-      background: @grey-ultralight;
+      background: @head-back;
     }
     
     &:hover:before {
@@ -39,5 +44,5 @@ table {
   }
   
   td { border-bottom-width: 1px }
-  tbody tr:hover { background: @grey-ultralight }
+  tbody tr:hover { background: @row-hover; }
 }
