@@ -1,13 +1,20 @@
 @import (reference) "_variables";
 
 
+@label-vgap: 0.6em;
+@label-font: 1em;
+@input-vgap: 1.2em;
+@input-font: 1em;
+@input-color: @ctext;
+@input-bcolor: @grey-light;
+
   // labels
 label {
   display: inline-block;
   width: 100%;
-  margin-top: 0.6em;
-  font-size: @fs-s;
-  font-weight: 400;
+  margin-top: @label-vgap;
+  font-size: @label-font;
+  font-weight: bold;
   text-transform: uppercase;
   
   &:first-child { margin-top: 0 }
@@ -16,20 +23,20 @@ label {
 .mx-input() {
   display: inline-block;
   width: 100%;
-  margin-bottom: 1.2em;
+  margin-bottom: @input-vgap;
   border: none;
   border-radius: 0;
-  border-bottom: 1px solid @grey-light;
+  border-bottom: 2px solid @input-bcolor;
   padding: 0.3em 0 0.6em;
   background: transparent;
-  font-size: @fs-m;
-  font-weight: 300;
+  font-size: @input-font;
+  // font-weight: 300;
   
   &:focus,
   &:hover {
     outline: 0;
-    border-color: @acolor;
-    color: @acolor;
+    border-color: @csec;
+    color: @input-color;
   }
 }
 
