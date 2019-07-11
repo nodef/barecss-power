@@ -9,32 +9,32 @@ button, input[type=submit], [btn] {
   
   // normal button styling
   cursor: pointer;
-  color: @acolor;
+  -webkit-appearance: none;
   display: inline-block;
-  padding: 0.9em 1.2em;
-  background: @norm-back;
+  margin: 0 0.6em 0.6em 0;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
   border: 1px solid @acolor;
   border-radius: 2px;
-  box-shadow: 0 0 0 rgba(0,0,0,0);
+  padding: 0.9em 1.2em;
+  background: @norm-back;
+  line-height: 1rem;
+  font-size: @fs-s;
+  font-weight: 700;
+  color: @norm-color;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  font-size: @fs-s;
-  font-weight: 700;
-  line-height: 1rem;
-  margin: 0 0.6em 0.6em 0;
-  -webkit-appearance: none;
   
   &:before {
     content: "";
     position: absolute;
+    top: 0;
+    left: 0;
     z-index: -1;
-    opacity: 0;
     width: 100%;
     height: 100%;
-    left: 0;
-    top: 0;
     transform: scale3d(1.2,1.2,1.2);
+    opacity: 0;
     background: @acolor;
   }
   
@@ -52,8 +52,8 @@ button, input[type=submit], [btn] {
   &[primary] {
     border-color: darken(@acolor, 6%);
     background: @acolor;
-    color: @zcolor;
     font-weight: 700;
+    color: @zcolor;
     
     &:not(:disabled):hover { background: darken(@acolor, 6%)	}
   }
@@ -69,9 +69,9 @@ button, input[type=submit], [btn] {
   // disabled button styling
   &:disabled,
   &.disabled {
+    cursor: default;
     border-color: @grey-light;
     background: @grey-light;
     color: @grey-mid;
-    cursor: default;
   }
 }
