@@ -1,27 +1,37 @@
 @import (reference) "_variables";
 
 
+@chr: @grey-light;
+
+
 img {
-	height: auto;
 	max-width: 100%;
+	height: auto;
 }
 
+
+// <section>			= centered section
+// <section wide>	= wide section
 section {
-	margin: auto;
-	padding: 2.2em 1.1em;
 	width: 100%;
-	max-width: @width;
+	padding: 3em 1em;
+
+	&:not([wide]) {
+		max-width: @width;
+		margin: auto;
+	}
 }
+
 
 p {
-	margin: 0 0 1.1em;
+	margin: 0 0 1em;
 	&:last-child { margin: 0 }
 }
 
 hr {
-	background: @grey-light;
-	border: none;
 	width: 100%;
 	height: 2px;
-	margin: 2.2em 0;
+	margin: 3em 0;
+	border: none;
+	background: @chr;
 }
