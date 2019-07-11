@@ -1,13 +1,19 @@
 @import (reference) "_variables";
 
 
+@tag-font: 0.8em;
+@tag-text: @def-text;
+@tag-back: darken(@def-back, 10%);
+@tag-border: darken(@tag-back, 10%);
+
+
 tag {
   display: inline-block;
   margin: 0 0.3em 0.3em 0;
-  border-bottom: 1px solid @grey-light;
+  border-bottom: 1px solid @tag-border;
   border-radius: 0.6em;
   padding: 0.1em 0.7em;
-  background: @grey-ultralight;
-  font-size: 0.8em;
-  color: @acolor;
+  background: @tag-back;
+  font-size: @tag-font;
+  color: @tag-text;
 }
