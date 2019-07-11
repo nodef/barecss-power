@@ -4,14 +4,9 @@
 ----------------------------------------------------------------------*/
 
 
-// note: set font family in _variables.less
-
 // headings
-.hx(@fs, @lh, @ls) { font-size: @fs; line-height: @lh; letter-spacing: @ls }
-
-h1@{n}, h1@{x} { .hx(@fs-xxxl, 1.1, -1px) }
-h2@{n}, h2@{x} { .hx(@fs-xxl,  1.1, -0.05rem) }
-h3@{n}, h3@{x} { .hx(@fs-xl,   1.3, -0.05rem) }
-h4@{n}, h4@{x} { .hx(@fs-l,    1.3, -0.05rem) }
-h5@{n}, h5@{x} { .hx(@fs-m,    1.5, 0rem); text-transform: uppercase; font-weight: 700 }
-h6@{n}, h6@{x} { .hx(@fs-m,    1.5, 0rem); text-transform: uppercase; font-weight: 400 }
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+h1, h3, h5 { text-transform: uppercase; }
+h1, h2 { font-size: 3em; line-height: 1.0; }
+h3, h4 { font-size: 2em; line-height: 1.2; }
+h5, h6 { font-size: 1em; line-height: 1.4; }
