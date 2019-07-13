@@ -3,7 +3,8 @@
 
 @norm-color:  @acolor;
 @norm-back: #fff;
-
+@disabled-color: @grey-mid;
+@button-back: @grey-ultralight;
 
 button, input[type=submit], [btn] {
   
@@ -40,7 +41,7 @@ button, input[type=submit], [btn] {
   
   &:not(:disabled):hover {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    background: @grey-ultralight;
+    background: @button-back;
     
     &:active {
       box-shadow: none;
@@ -72,6 +73,6 @@ button, input[type=submit], [btn] {
     cursor: default;
     border-color: @grey-light;
     background: @grey-light;
-    color: @grey-mid;
+    color: @disabled-color;
   }
 }

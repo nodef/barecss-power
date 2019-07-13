@@ -1,17 +1,22 @@
 @import (reference) "_variables";
 
 
+@code-color: @grey-ultradark;
+@code-border: @grey-light;
+@code-back: @grey-ultralight;
+
+
 code {
   display: inline-block;
-  border: 1px solid @grey-light;
+  border: 1px solid @code-border;
   border-radius: 2px;
   padding: 0 0.4em;
-  background: @grey-ultralight;
+  background: @code-back;
   font-family: monospace;
   font-size: @fs-s !important; // (not needed)
   font-weight: 300;
   line-height: 1.8;
-  color: @grey-ultradark;
+  color: @code-color;
   text-transform: none;
 }
 

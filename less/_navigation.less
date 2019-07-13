@@ -15,6 +15,12 @@
 
 @menus-bcolor: darken(@cback, 20%);
 @menus-font:   2rem;
+@dd-border: @grey-light;
+@menu-border: @grey-light;
+@dd-back: @grey-ultralight;
+@menu-shadow: @box-shadow;
+@ul-shadow: @box-shadow;
+
 
 nav {
   min-height: 8rem;
@@ -108,7 +114,7 @@ nav {
       transform: translate3d(0,-2rem,0);
       visibility: hidden;
       opacity: 0;
-      box-shadow: @box-shadow;
+      box-shadow: @menu-shadow;
     }
     
     menuitem {
@@ -117,7 +123,7 @@ nav {
       
       &:hover {
         border-color: @acolor;
-        background-color: @grey-ultralight;
+        background-color: @dd-back;
         a { transform: translate3d(0.5rem,0,0) }
       }
       
@@ -214,7 +220,7 @@ nav {
         bottom: 0;
         right: 0;
         transform: translate3d(100%,0,0);
-        box-shadow: @box-shadow;
+        box-shadow: @ul-shadow;
         border-top: 1px solid @acolor;
         padding: 0;
         background: @menus-bcolor;
@@ -224,7 +230,7 @@ nav {
         
         li {
           display: block;
-          border-top: 1px solid @grey-light;
+          border-top: 1px solid @menu-border;
         }
         
         a {
@@ -255,7 +261,7 @@ nav {
       }
       
       menu {
-        menuitem { border-color: @grey-light;	}
+        menuitem { border-color: @dd-border;	}
         a { padding-left: 4rem;	}
       }
     }
