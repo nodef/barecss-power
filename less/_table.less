@@ -2,11 +2,11 @@
 
 
 // config
-@head-border: darken(@def-back, 10%);
-@head-back:  @def-back;
-@head-hover: darken(@def-back, 10%);
-@head-text:  @def-text;
-@row-hover:  darken(@def-back, 10%);
+@th-back:  @def-back;
+@th-hover: darken(@def-back, 10%);
+@th-text:  @def-text;
+@tr-border: darken(@def-back, 15%);
+@tr-hover:  darken(@def-back, 10%);
 
 
 table {
@@ -18,17 +18,32 @@ table {
   overflow: hidden;
   
   th, td {
-    border-bottom: 2px solid @head-border;
+    border-bottom: 2px solid @tr-border;
     padding: 0.8em;
   }
   
-  // th {
-  //   // background: @head-back;
-  //   // font-weight: bold;
-  //   // color: @head-text;
-  // }
+	th {
+		&::before {
+			content: "";
+			width: 100%;
+			height: 10000%;
+			position: absolute;
+			display: block;
+			top: 0;
+			left: 0;
+			background: @th-hover;
+			z-index: -1;
+			opacity: 0;
+			visibility: hidden;
+		}
+		
+		&:hover::before {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
   
   td { border-bottom-width: 1px }
-  th:hover { background: @head-hover; }
-  tbody > tr:hover { background: @row-hover; }
+
+  tbody > tr:hover { background: @tr-hover; }
 }

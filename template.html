@@ -499,7 +499,7 @@
     </div>
 
     <div col="1/2">
-      <tag>One</tag>
+      <tag class="pri">One</tag>
       <tag>Two</tag>
       <tag>Three</tag>
       <tag>Four</tag>
@@ -530,21 +530,21 @@
 
   <p>Tooltips are handy and BareCSS provides you with classless, no javascript tooltips. Tooltips can be applied to
     most tags, as long as they accept the <code>::before</code> and <code>::after</code> pseudo elements. Just use
-    <code>title="Your tooltip here"</code> in the tag.</p>
+    <code>tt="Your tooltip here"</code> in the tag.</p>
 
-  <p>Hover over <b title="Tooltip on a <b> tag">this</b> for a tooltip on a <code>b</code> tag. Hover over <code
-      title="Tooltip on a <code> tag">this</code>, or <a href="" title="Tooltip on an anchor tag">this</a> or even <sup
-      title="Tooltip on a <sup> tag">this</sup> to see tooltips in action.</p>
+  <p>Hover over <b tt="Tooltip on a <b> tag">this</b> for a tooltip on a <code>b</code> tag. Hover over <code
+      tt="Tooltip on a <code> tag">this</code>, or <a href="" tt="Tooltip on an anchor tag">this</a> or even <sup
+      tt="Tooltip on a <sup> tag">this</sup> to see tooltips in action.</p>
 
   <p><em>Note: These tooltips aren't clever so they will spill offscreen. You'll need some Javascript if you want
       dynamic positioning.</em></p>
 
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- inline element -->
-<b title="Tooltip">Tooltip</b>
+<b tt="Tooltip">Tooltip</b>
 
 <!-- buttons -->
-<button class="primary" title="Primary button with a tooltip">Primary button</button>
+<button class="primary" tt="Primary button with a tooltip">Primary button</button>
 <button tooltip="Normal button with a tooltip">Normal button</button></code></pre>
 <!-- /code -----------------------------------------------------// -->
 
@@ -565,16 +565,16 @@
       <p>Use the primary button to toggle the normal/disabled button.</p>
 
       <p>
-        <button primary m-full xx class="js-toggle-right-btn" title="Click to toggle right button">Toggle next
+        <button primary m-full xx class="js-toggle-right-btn" tt="Click to toggle right button">Toggle next
           button</button>
-        <button primary m-full xx class="js-right-btn" disabled="true" title="Not disabled"
-          title-disabled="Disabled button tooltip">Disabled button</button>
+        <button primary m-full xx class="js-right-btn" disabled="true" tt="Not disabled"
+          dtt="Disabled button tooltip">Disabled button</button>
       </p>
 
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- disabled buttons -->
 <!-- note that you can have tooltips for enabled and disabled states -->
-<button disabled="true" title="Not disabled" title-disabled="Disabled">Disabled button</button>
+<button disabled="true" tt="Not disabled" dtt="Disabled">Disabled button</button>
 </code></pre>
 <!-- /code -----------------------------------------------------// -->
 

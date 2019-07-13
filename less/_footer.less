@@ -2,14 +2,14 @@
 
 
 // config
-@text: @pri-text;
-@back: @pri-back;
+@footer-text: @pri-text;
+@footer-back: @pri-back;
 
 
 footer {
   width: 100%;
   padding: 1.1em;
-  color: @text;
+  color: @footer-text;
   overflow: hidden;
   
   &:before {
@@ -20,6 +20,6 @@ footer {
     width: 102vw;
     height: 100%;
     transform: translate(-50%,0);
-    background: @back;
+    background: @footer-back;
   }
 }

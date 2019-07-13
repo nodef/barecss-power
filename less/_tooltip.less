@@ -2,16 +2,16 @@
 
 
 // config
-@back: @def-text;
-@font: sans-serif;
-@color: @def-back;
-@size: 1.2rem;
+@tt-back: @def-text;
+@tt-font: sans-serif;
+@tt-size: 1rem;
+@tt-text: @def-back;
 
-  
-  // sets the styling for tooltips
-[title]:not([nohelp]), [title-disabled]:disabled {
-  overflow: visible;
-  
+
+// tooltip
+// BUG: on <code> it is larger, but why?
+[tt], [dtt]:disabled {
+  // default
   &::after {
     pointer-events: none;
     position: absolute;
@@ -23,27 +23,27 @@
     opacity: 0;
     border-radius: 3px;
     padding: 0.5rem 1rem;
-    background: @back;
-    font: normal @size @font;
-    // line-height: 2.5;
-    color: @color;
+    background: @tt-back;
+    font: normal @tt-size @tt-font;
+    color: @tt-text;
     text-transform: none;
-    // letter-spacing: 0;
     white-space: nowrap;
   }
   
+  // on hover
   &:hover::after {
     transform: translate(-50%,~"calc(-100% - 5px)");
     visibility: visible;
     opacity: 0.9;
   }
 }
-  
-  // sets the content for tooltip
-  // eg: <span title="This is a tooltip"></span>
-[title]:not([nohelp])::after { content: attr(title); }
 
-  // sets the content for disabled tooltips
-  // can be used in conjunction with title
-  // eg: <button disabled title-disabled="This button is disabled"></button>
-[title-disabled]:disabled::after { content: attr(title-disabled); }
+
+// sets the content for tooltip
+// eg: <span tt="This is a tooltip"></span>
+[tt]::after { content: attr(tt); }
+
+// sets the content for disabled tooltips
+// can be used in conjunction with title
+// eg: <button disabled dtt="This button is disabled"></button>
+[dtt]:disabled::after { content: attr(dtt); }

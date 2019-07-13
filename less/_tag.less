@@ -1,13 +1,14 @@
 @import (reference) "_variables";
 
 
+// config
 @tag-font: 0.8em;
-@tag-text: @def-text;
-@tag-back: darken(@def-back, 10%);
-@tag-border: darken(@tag-back, 10%);
+@tag-back: .twinkle(@def-back, 10%)[x];
+@tag-border: .twinkle(@def-back, 15%)[x];
 
 
 tag {
+  // default
   display: inline-block;
   margin: 0 0.3em 0.3em 0;
   border-bottom: 1px solid @tag-border;
@@ -15,5 +16,4 @@ tag {
   padding: 0.1em 0.7em;
   background: @tag-back;
   font-size: @tag-font;
-  color: @tag-text;
 }

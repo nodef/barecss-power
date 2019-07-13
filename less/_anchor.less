@@ -2,16 +2,16 @@
 
 
 // config
-@back: @sec-back;
-@base: 0.2;
-@text: inherit;
+@a-back: @sec-back;
+@a-base: 0.2;
+@a-text: inherit;
 
 
 // normal
 a {
   display: inline-block;
   z-index: 1;
-  color: @text;
+  color: @a-text;
   text-decoration: none;
   
   // inside paragraph
@@ -23,10 +23,10 @@ a {
       z-index: -1;
       width: 100%;
       height: 100%;
-      transform: scale3d(1,@base,1);
+      transform: scale3d(1,@a-base,1);
       transform-origin: bottom;
       opacity: 0.5;
-      background: @back;
+      background: @a-back;
     }
     
     // on hover

@@ -35,5 +35,11 @@
 
 
 // widths
-@width:  90rem;
+@width:  60rem;
 @mobile: 50rem;
+
+
+// lighten or darken color by a precent
+.twinkle(@color, @percent) {
+  x: if(luma(@color) < 50%, lighten(@color, @percent), darken(@color, @percent));
+}
