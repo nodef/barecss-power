@@ -1,16 +1,18 @@
 @import (reference) "_variables";
 
 
-@tt-back: @def-text;
-@tt-text: @def-back;
-@tt-font: 1.2rem;
+// config
+@back: @def-text;
+@font: sans-serif;
+@color: @def-text;
+@size: 1.2rem;
 
   
   // sets the styling for tooltips
-[tt], [dtt]:disabled {
+[title]:not([nohelp]), [title-disabled]:disabled {
   overflow: visible;
   
-  &:after {
+  &::after {
     pointer-events: none;
     position: absolute;
     top: 0;
@@ -21,18 +23,16 @@
     opacity: 0;
     border-radius: 3px;
     padding: 0.5rem 1rem;
-    background: @tt-back;
-    font-family: sans-serif;
-    font-size: @tt-font;
-    font-weight: 300;
+    background: @back;
+    font: normal @size @font;
     // line-height: 2.5;
-    color: @tt-text;
+    color: @color;
     text-transform: none;
     // letter-spacing: 0;
     white-space: nowrap;
   }
   
-  &:hover:after {
+  &:hover::after {
     transform: translate(-50%,~"calc(-100% - 5px)");
     visibility: visible;
     opacity: 0.9;
@@ -40,10 +40,10 @@
 }
   
   // sets the content for tooltip
-  // eg: <span tt="This is a tooltip"></span>
-[tt]:after { content: attr(tt) }
+  // eg: <span title="This is a tooltip"></span>
+[title]:not([nohelp])::after { content: attr(title); }
 
   // sets the content for disabled tooltips
-  // can be used in conjunction with tt
-  // eg: <button disabled dtt="This button is disabled"></button>
-[dtt]:disabled:after { content: attr(dtt) }
+  // can be used in conjunction with title
+  // eg: <button disabled title-disabled="This button is disabled"></button>
+[title-disabled]:disabled::after { content: attr(title-disabled); }
