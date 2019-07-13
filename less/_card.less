@@ -1,17 +1,18 @@
 @import (reference) "_variables";
 
 
+// config
 @card-shadow: @box-shadow;
+@back: @def-back;
 
 
-  // eg: <div class="card"></div>
 card {
   display: block;
   margin-bottom: 1.2em;
   box-shadow: @card-shadow;
   border-radius: 2px;
   padding: 1.2em;
-  background: #fff;
+  background: @back;
   
   hr { margin: 0.6em 0; }
   

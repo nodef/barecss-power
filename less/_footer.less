@@ -1,10 +1,15 @@
 @import (reference) "_variables";
 
 
+// config
+@text: @pri-text;
+@back: @pri-back;
+
+
 footer {
   width: 100%;
   padding: 1.1em;
-  color: @pri-text;
+  color: @text;
   overflow: hidden;
   
   &:before {
@@ -15,6 +20,6 @@ footer {
     width: 102vw;
     height: 100%;
     transform: translate(-50%,0);
-    background: @pri-back;
+    background: @back;
   }
 }

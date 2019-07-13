@@ -1,23 +1,24 @@
 @import (reference) "_variables";
 
 
-@code-color: @grey-ultradark;
-@code-border: @grey-light;
-@code-back: @grey-ultralight;
+// config
+@border: @grey-light;
+@back:   @grey-ultralight;
+@text:   @grey-ultradark;
 
 
 code {
   display: inline-block;
-  border: 1px solid @code-border;
+  border: 1px solid @border;
   border-radius: 2px;
   padding: 0 0.4em;
-  background: @code-back;
-  font-family: monospace;
-  font-size: @fs-s !important; // (not needed)
-  font-weight: 300;
-  line-height: 1.8;
-  color: @code-color;
-  text-transform: none;
+  background: @back;
+  font-family: monospace; // do some magic
+  font-size: 1.2em !important; // (not needed)
+  // font-weight: normal;
+  // line-height: 1.8;
+  // color: @text;
+  // text-transform: none;
 }
 
 pre {
