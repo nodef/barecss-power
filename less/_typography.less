@@ -1,19 +1,24 @@
 @import (reference) "_variables";
 
 
-@body-back: @def-back;
-@body-text: @def-text;
 @selection-back: @sec-back;
 @selection-text: @sec-text;
 
 
 // body
 body {
-  background: @body-back;
+  background: @def-back;
   line-height: 1.8;
-  color: @body-text;
+  color: @def-text;
 }
-
+.sec {
+  background: @sec-back;
+  color: @sec-text;
+}
+.pri {
+  background: @pri-back;
+  color: @pri-text;
+}
 
 // headings
 h1, h2, h3, h4, h5, h6 { margin: 0 0 2rem; font-weight: bold; }
