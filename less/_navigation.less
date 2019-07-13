@@ -11,7 +11,7 @@
 
 @menu-font: 3rem;
 @menu-vgap: 0.4em;
-@menu-hover: @csec;
+@menu-hover: @sec-back;
 
 @menus-bcolor: darken(@cback, 20%);
 @menus-font:   2rem;
@@ -28,7 +28,7 @@ nav {
   padding: 0 2rem;
   background: @cback;
   font-size: @fnav;
-  color: @ctext;
+  color: @pri-text;
   //X vertical-align: center;
   
   // fix to top?
@@ -122,7 +122,7 @@ nav {
       border-left: 4px solid transparent;
       
       &:hover {
-        border-color: @acolor;
+        border-color: @pri-back;
         background-color: @dd-back;
         a { transform: translate3d(0.5rem,0,0) }
       }
@@ -221,7 +221,7 @@ nav {
         right: 0;
         transform: translate3d(100%,0,0);
         box-shadow: @ul-shadow;
-        border-top: 1px solid @acolor;
+        border-top: 1px solid @pri-back;
         padding: 0;
         background: @menus-bcolor;
         overflow-x: visible;

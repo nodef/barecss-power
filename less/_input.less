@@ -5,7 +5,7 @@
 @label-font: 1em;
 @input-vgap: 1.2em;
 @input-font: 1em;
-@input-color: @ctext;
+@input-color: @pri-text;
 @input-bcolor: @grey-light;
 @radio-border: @grey-mid;
 @select-border: @grey-light;
@@ -39,7 +39,7 @@ label {
   &:focus,
   &:hover {
     outline: 0;
-    border-color: @csec;
+    border-color: @sec-back;
     color: @input-color;
   }
 }
@@ -79,7 +79,7 @@ select {
   &:focus,
   &:hover {
     outline: 0;
-    border-color: @acolor;
+    border-color: @pri-back;
   }
 }
 
@@ -142,8 +142,8 @@ input {
     
     &:checked + label {
       &:before {
-        border-color: @acolor;
-        background: @acolor;
+        border-color: @pri-back;
+        background: @pri-back;
       }
       
       &:after {
@@ -151,9 +151,9 @@ input {
         transform: scale(1);
         visibility: visible;
         opacity: 1;
-        border: 1px solid @zcolor;
+        border: 1px solid @pri-text;
         border-radius: 100%;
-        background: @acolor;
+        background: @pri-back;
       }
     }
   }
@@ -178,8 +178,8 @@ input {
     &:checked {
       + label {
         &:before {
-          border-color: @acolor;
-          background: @acolor;
+          border-color: @pri-back;
+          background: @pri-back;
         }
         
         &:after {

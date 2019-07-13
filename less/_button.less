@@ -1,7 +1,7 @@
 @import (reference) "_variables";
 
 
-@norm-color:  @acolor;
+@norm-color:  @pri-back;
 @norm-back: #fff;
 @disabled-color: @grey-mid;
 @button-back: @grey-ultralight;
@@ -14,7 +14,7 @@ button, input[type=submit], [btn] {
   display: inline-block;
   margin: 0 0.6em 0.6em 0;
   box-shadow: 0 0 0 rgba(0,0,0,0);
-  border: 1px solid @acolor;
+  border: 1px solid @pri-back;
   border-radius: 2px;
   padding: 0.9em 1.2em;
   background: @norm-back;
@@ -36,7 +36,7 @@ button, input[type=submit], [btn] {
     height: 100%;
     transform: scale3d(1.2,1.2,1.2);
     opacity: 0;
-    background: @acolor;
+    background: @pri-back;
   }
   
   &:not(:disabled):hover {
@@ -51,12 +51,12 @@ button, input[type=submit], [btn] {
   
   // primary button styling
   &[primary] {
-    border-color: darken(@acolor, 6%);
-    background: @acolor;
+    border-color: darken(@pri-back, 6%);
+    background: @pri-back;
     font-weight: 700;
-    color: @zcolor;
+    color: @pri-text;
     
-    &:not(:disabled):hover { background: darken(@acolor, 6%)	}
+    &:not(:disabled):hover { background: darken(@pri-back, 6%)	}
   }
   
   &[round] {
