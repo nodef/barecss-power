@@ -1,0 +1,52 @@
+@import (reference) "_variables";
+
+
+a, button, input, menu, menuitem, textarea, select, tag, th, tr, ul, ::before, ::after {
+  transition: all 0.3s ease-in-out;
+}
+
+// buzz
+.buzz, .ripple {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(0.1em) translateZ(0);
+  box-shadow: 0 0 0.1em rgba(0, 0, 0, 0);
+}
+@keyframes buzz {
+  50% { transform: translateX(0.2em) rotate(2deg); }
+  100% { transform: translateX(-0.2em) rotate(-2deg); }
+}
+.buzz:hover, .buzz:focus, .buzz:active {
+  animation-name: buzz;
+  animation-duration: 0.15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+// ripple
+@ripple-color: #e1e1e1;
+.ripple {
+  position: relative;
+}
+@keyframes ripple {
+  100% {
+    top: -0.75em;
+    right: -0.75em;
+    bottom: -0.75em;
+    left: -0.75em;
+    opacity: 0;
+  }
+}
+.ripple::before {
+  content: '';
+  position: absolute;
+  border: @ripple-color solid 0.4em;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation-duration: 1s;
+}
+.ripple:hover::before, .ripple:focus::before, .ripple:active::before {
+  animation-name: ripple;
+}
