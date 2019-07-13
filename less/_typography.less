@@ -1,8 +1,22 @@
 @import (reference) "_variables";
 
 
+@body-back: @def-back;
+@body-text: @def-text;
+@selection-back: @sec-back;
+@selection-text: @sec-text;
+
+
+// body
+body {
+  background: @body-back;
+  line-height: 1.8;
+  color: @body-text;
+}
+
+
 // headings
-h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+h1, h2, h3, h4, h5, h6 { margin: 0 0 2rem; font-weight: bold; }
 h1, h3, h5 { text-transform: uppercase; }
 h1, h2 { font-size: 3em; line-height: 1.0; }
 h3, h4 { font-size: 2em; line-height: 1.2; }
@@ -13,4 +27,11 @@ h5, h6 { font-size: 1em; line-height: 1.4; }
 html, body, input, textarea, select, button {
   font-family: 'Righteous', 'Ubuntu', 'Open Sans', 'Lato', 'Raleway',
     "Trebuchet MS", Tahoma, Helvetica, sans-serif;
+}
+
+
+// text selection
+::selection {
+  background-color: @selection-back;
+  color: @selection-text;
 }
