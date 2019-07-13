@@ -2,6 +2,7 @@
 
 
 // config
+@nav-hgap: 2rem;
 @nav-back: @pri-back;
 @nav-text: @pri-text;
 @nav-font: 1rem;
@@ -11,47 +12,45 @@
 @logo-hgap:  0.5em;
 @title-font: 1.5em;
 
-@menu-font: 1rem;
-@menu-vgap: 0.4em;
+@menu-font: 1em;
+@menu-gap: 1em;
+@menu-bsize: 4px;
 @menu-hover: @sec-back;
 
-@menus-bcolor: darken(@nav-back, 20%);
-@menus-font:   1rem;
+@dd-back: darken(@nav-back, 20%);
+@dd-font:   1rem;
 @dd-border: @grey-light;
 @menu-border: @grey-light;
-@dd-back: @grey-ultralight;
-@menu-shadow: @box-shadow;
+@dd-shadow: @box-shadow;
 @ul-shadow: @box-shadow;
+@dd-hborder: lighten(@def-text, 10%);
+@dd-hback: darken(@def-back, 10%);
 
 
 nav {
-  min-height: 5rem;
   z-index: 10;
-  padding: 0 2rem;
-  background: @nav-back;
+  width: 100%;
+  padding: 0 @nav-hgap;
+  background: @nav-back; // ?
   font-size: @nav-font;
-  color: @nav-text;
-  // vertical-align: center;
+  color: @nav-text; // ?
   
   // fixed
-  &[fx] {
+  &.fixed {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    z-index: 11;
   }
   
-  // contains everything in the nav
+  // container
   label {
     display: block;
     > input { display: none }
   }
   
-  // where the main navigation items live
+  // menu
   ul {
     margin: 0;
-    padding: 0;
     line-height: @nav-height;
     text-align: right;
         
@@ -60,29 +59,30 @@ nav {
       font-size: @menu-font;
     }
     
+    // menu -> dropdown open
     @media (min-width: (@mobile + .1)) {
       li:hover menu, menu:hover {
         pointer-events: auto;
-        transform: translate3d(0,-1rem,0);
+        transform: translate3d(0,0,0);
         visibility: visible;
         opacity: 1;
       }
     }
     
+    // menu item
     a {
       cursor: pointer;
       display: block;
-      border-bottom: 4px solid transparent;
-      // padding: 0.8rem 2rem 0.4rem;
-      padding: 0 1rem;
-      font-weight: 300;
+      border-bottom: @menu-bsize solid transparent;
+      padding: 0 @menu-gap;
+      font-weight: normal;
       text-decoration: none;
       text-transform: none;
       
-      // sets drop down menu styling
+      // menu with dropdown
       @media (min-width: (@mobile + .1)) {
         &:not(:only-child) {
-          padding-right: 3rem;
+          padding-right: 2em;
           background-image: data-uri('../icons/chevron-down.svg');
           background-repeat: no-repeat;
           background-position: right center;
@@ -90,6 +90,7 @@ nav {
         }
       }
       
+      // on menu hover
       &:hover {
         border-color: @menu-hover;
         color: @menu-hover;
@@ -97,67 +98,67 @@ nav {
     }
   }
   
-  // drop down menu
+  // drop down
   menu {
     min-width: 100%;
     z-index: 2;
     margin: 0;
     padding: 0;
-    background: @menus-bcolor;
+    background: @dd-back;
     white-space: nowrap;
     text-align: left;
-    line-height: 0.9em;
+    line-height: 1em;
     
     @media (min-width: (@mobile + .1)) {
       pointer-events: none;
       position: absolute;
       top: 100%;
       left: 0;
-      transform: translate3d(0,-2rem,0);
+      transform: translate3d(0,-2em,0);
       visibility: hidden;
       opacity: 0;
-      box-shadow: @menu-shadow;
+      box-shadow: @dd-shadow;
     }
     
+    // drop down item
     menuitem {
       display: block;
       border-left: 4px solid transparent;
       
       &:hover {
-        border-color: @pri-back;
-        background-color: @dd-back;
-        a { transform: translate3d(0.5rem,0,0) }
+        border-color: @dd-hborder;
+        background-color: @dd-hback;
+        a { transform: translate3d(0.5em,0,0) }
       }
       
       a {
         border: none;
-        padding: 0.5rem 1.5rem 0.5rem 1.2rem;
-        font-size: @menus-font;
-        text-transform: none;
+        padding: 0.5em 1.5em;
+        font-size: @dd-font;
       }
     }
   }
   
-  // where the title/logo lives in the nav bar
-  // contains the hamburger menu in mobile view
   header {
+    // hamburger, close menu
     &::before, &::after {
       content: '';
       display: none;
       position: absolute;
       top: 0;
       right: 1rem;
-      width: 8rem;
-      height: 8rem;
-      background-size: 4rem;
-      background-position: center center;
+      width: @nav-height;
+      height: @nav-height;
+      background-position: center;
       background-repeat: no-repeat;
     }
     
+    // hamburger
     &::before {
       background-image: data-uri('../icons/hamburger.svg');
     }
     
+    // close
     &::after {
       transform: rotate(180deg);
       opacity: 0;
@@ -188,7 +189,7 @@ nav {
 // mobile view
 @media (max-width: @mobile) {
   
-  // clears the top of the page for the fixed nav
+  // clears page for fixed nav
   body {
     padding-top: @nav-height;
   }
@@ -198,7 +199,6 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
     padding: 0;
     
     header {
@@ -223,7 +223,7 @@ nav {
         box-shadow: @ul-shadow;
         border-top: 1px solid @pri-back;
         padding: 0;
-        background: @menus-bcolor;
+        background: @dd-back;
         overflow-x: visible;
         overflow-y: auto;
         text-align: left;
