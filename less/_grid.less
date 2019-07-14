@@ -17,11 +17,11 @@ row, .row, grid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: -1rem;
 }
 
 
 // small view
-@media @view-cn { .c1, .c2, .c3, .c4, .c6, .c8, .c9, .c10, .c12 { width: 100%; } }
 .c1  { .width(1); }
 .c2  { .width(2); }
 .c3  { .width(3); }
@@ -33,10 +33,10 @@ row, .row, grid {
 .c12 { .width(12); }
 .c0  { display: none; }
 .cx  { visibility: hidden; }
+@media @view-cn { .c1, .c2, .c3, .c4, .c6, .c8, .c9, .c10, .c12 { width: 100%; } }
 
 
 // smaller view
-@media @view-bn { .b1, .b2, .b3, .b4, .b6, .b8, .b9 { width: 100%; } }
 @media @view-bp {
   .b1  { .width(1); }
   .b2  { .width(2); }
@@ -50,6 +50,7 @@ row, .row, grid {
   .b0  { display: none; }
   .bx  { visibility: hidden; }
 }
+@media @view-bn { .b1, .b2, .b3, .b4, .b6, .b8, .b9 { width: 100%; } }
 
 
 // eg: <div col="6"></div>
