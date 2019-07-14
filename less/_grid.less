@@ -10,6 +10,7 @@
   width: 100% / @columns * @x;
 }
 
+
 // <grid> acts as a container for [col]
 // eg: <div class="grid"><div class="col twelve"></div></div>
 grid {
@@ -20,31 +21,44 @@ grid {
 
 
 // large view
-@media @view-dn { .d1, .d2, .d3, .d4, .d6 { width: 100%; } }
+@media @view-dn { .d1, .d2, .d3, .d4, .d6, .d8, .d9 { width: 100%; } }
 @media @view-dp {
   .d1  { .width(1); }
   .d2  { .width(2); }
   .d3  { .width(3); }
   .d4  { .width(4); }
   .d6  { .width(6); }
+  .d8  { .width(8); }
+  .d9  { .width(9); }
 }
 
+
 // small view
-@media @view-cn { .c1, .c2, .c3, .c4, .c6 { width: 100%; } }
+@media @view-cn { .c1, .c2, .c3, .c4, .c6, .c8, .c9 { width: 100%; } }
+.c0  { display: none; } 
 .c1  { .width(1); }
 .c2  { .width(2); }
 .c3  { .width(3); }
 .c4  { .width(4); }
 .c6  { .width(6); }
+.c8  { .width(8); }
+.c9  { .width(9); }
+.c0  { display: none; }
+.cx  { visibility: hidden; }
+
 
 // smaller view
-@media @view-bn { .b1, .b2, .b3, .b4, .b6 { width: 100%; } }
+@media @view-bn { .b1, .b2, .b3, .b4, .b6, .b8, .b9 { width: 100%; } }
 @media @view-bp {
   .b1  { .width(1); }
   .b2  { .width(2); }
   .b3  { .width(3); }
   .b4  { .width(4); }
   .b6  { .width(6); }
+  .b8  { .width(8); }
+  .b9  { .width(9); }
+  .b0  { display: none; }
+  .bx  { visibility: hidden; }
 }
 
 
