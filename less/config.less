@@ -37,7 +37,29 @@
 // widths
 @width:  60rem;
 @mobile: 50rem;
-// @desktop: (min-width: (@mobile + .1));
+
+@view-a: 200px;
+@view-b: 400px;
+@view-c: 800px;
+@view-d: 1600px;
+@view-e: 3200px;
+@view-f: 6400px;
+
+
+// media query
+@view-an: ~'(max-width:' @view-a   ~')';
+@view-ap: ~'(min-width:' @view-a+1 ~')';
+@view-bn: ~'(max-width:' @view-b   ~')';
+@view-bp: ~'(min-width:' @view-b+1 ~')';
+@view-cn: ~'(max-width:' @view-c   ~')';
+@view-cp: ~'(min-width:' @view-c+1 ~')';
+@view-dn: ~'(max-width:' @view-d   ~')';
+@view-dp: ~'(min-width:' @view-d+1 ~')';
+@view-en: ~'(max-width:' @view-e   ~')';
+@view-ep: ~'(min-width:' @view-e+1 ~')';
+@view-fn: ~'(max-width:' @view-f   ~')';
+@view-fp: ~'(min-width:' @view-f+1 ~')';
+
 
 // lighten or darken color by a precent
 .twinkle(@color, @percent) {

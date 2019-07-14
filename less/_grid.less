@@ -5,6 +5,11 @@
 @columns: 12;
 
 
+// set width
+.width(@x) {
+  width: 100% / @columns * @x;
+}
+
 // <grid> acts as a container for [col]
 // eg: <div class="grid"><div class="col twelve"></div></div>
 grid {
@@ -14,9 +19,32 @@ grid {
 }
 
 
-// set width
-.width(@x) {
-  width: 100% / @columns * @x;
+// large view
+@media @view-dn { .d1, .d2, .d3, .d4, .d6 { width: 100%; } }
+@media @view-dp {
+  .d1  { .width(1); }
+  .d2  { .width(2); }
+  .d3  { .width(3); }
+  .d4  { .width(4); }
+  .d6  { .width(6); }
+}
+
+// small view
+@media @view-cn { .c1, .c2, .c3, .c4, .c6 { width: 100%; } }
+.c1  { .width(1); }
+.c2  { .width(2); }
+.c3  { .width(3); }
+.c4  { .width(4); }
+.c6  { .width(6); }
+
+// smaller view
+@media @view-bn { .b1, .b2, .b3, .b4, .b6 { width: 100%; } }
+@media @view-bp {
+  .b1  { .width(1); }
+  .b2  { .width(2); }
+  .b3  { .width(3); }
+  .b4  { .width(4); }
+  .b6  { .width(6); }
 }
 
 
