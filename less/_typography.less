@@ -6,31 +6,35 @@
 @selection-text: @sec-text;
 
 
-// tints
-body {
-  background: @def-back;
-  color: @def-text;
+// set colors
+.colors(@b, @f) {
+  background: @b;
+  color: @f;
 }
-.sec {
-  background: @sec-back;
-  color: @sec-text;
+
+// set color scheme
+.scheme(@b, @f, @c) {
+  background: mix(@b, @c, 50%);
+  color: mix(@f, @c, 50%);
 }
-.pri {
-  background: @pri-back;
-  color: @pri-text;
+
+// set color theme
+.theme(@b, @f) {
+  & .fail     { .scheme(@b, @f, red); }
+  & .success  { .scheme(@b, @f, green); }
+  & .progress { .scheme(@b, @f, blue); }
+  & .normal   { .scheme(@b, @f, cyan); }
+  & .error    { .scheme(@b, @f, magenta); }
+  & .warning  { .scheme(@b, @f, yellow); }
 }
-.dark {
-  background: @def-text;
-  color: @def-back;
-}
-.dark.sec {
-  background: @sec-text;
-  color: @sec-back;
-}
-.dark.pri {
-  background: @pri-text;
-  color: @pri-back;
-}
+
+// themes
+body            { .theme(@def-back, @def-text); }
+.dark           { .theme(@def-text, @def-back); }
+.secondary      { .theme(@sec-back, @sec-text); }
+.secondary.dark { .theme(@sec-text, @sec-back); }
+.primary        { .theme(@pri-back, @pri-text); }
+.primary.dark   { .theme(@pri-text, @pri-back); }
 
 
 // headings
