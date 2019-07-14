@@ -86,13 +86,13 @@
     <h2>About BareCSS</h2>
   </div>
 
-  <grid>
+  <row>
     <!-- what is it -->
-    <div col="1/4">
+    <cell class="c3">
       <h3>What is it?</h3>
-    </div>
+    </cell>
 
-    <div col="3/4">
+    <cell class="c9">
       <p>BareCSS is a CSS only framework that styles frequently used HTML tags without the need for classes. It also
         provides a few utilities such as a responsive grid and CSS only tooltips.</p>
       <p>BareCSS can be used stand-alone or as a foundation to build upon. This site you're viewing now uses BareCSS
@@ -102,16 +102,16 @@
       <p><a att download
           href="https://github.com/longsien/BareCSS/releases/download/v1.1.0/BareCSS-v1.1.0.zip">Download latest
           release</a>.</p>
-    </div>
+    </cell>
 
     <hr>
 
     <!-- why does it exist? -->
-    <div col="1/4">
+    <cell class="c3">
       <h3>Why does it exist?</h3>
-    </div>
+    </cell>
 
-    <div col="3/4">
+    <cell class="c9">
       <p>Sometimes you want to quickly set up a simple site or application. You don't want it to look like a
         Word&trade; doc but you also don't want/need a massive framework such as <a att href="http://getbootstrap.com"
           target="_blank">Bootstrap</a> or <a att href="http://foundation.zurb.com" target="_blank">Foundation</a> or
@@ -126,16 +126,16 @@
         components and modules, you may not want the standard stylings to apply, so by giving them a class you're
         removing all Bare styling. If you want to add a class and want the Bare styling applied, just add the
         <code>xx</code> attribute to that element.</p>
-    </div>
+    </cell>
 
     <hr>
 
     <!-- how does it work? -->
-    <div col="1/4">
+    <cell class="c3">
       <h3>How does it work?</h3>
-    </div>
+    </cell>
 
-    <div col="3/4">
+    <cell class="c9">
       <p>BareCSS effectively changes the default browser styles. Any commonly used tags such as <code xx
           class="esc">input</code> or <code xx class="esc">button</code> are styled <em>only</em> if they don't have
         any classes.</p>
@@ -154,8 +154,8 @@
 <button xx class="your-btn-class">Button</button></code></pre>
 <!-- /code -----------------------------------------------------// -->
 
-    </div>
-  </grid>
+    </cell>
+  </row>
 </section>
 
 
@@ -165,12 +165,12 @@
     <h2>Change log</h2>
   </div>
 
-  <grid>
-    <div col="1/2">
+  <row>
+    <cell class="c6">
       <h3>v1.1.0</h3>
-    </div>
+    </cell>
 
-    <div col="1/2">
+    <cell class="c6">
       <ul>
         <li>
           Removed all classes <b>(note: this is a breaking change)</b>
@@ -194,21 +194,21 @@
         <li>Introduced footer</li>
         <li>Includes a template HTML file</li>
       </ul>
-    </div>
+    </cell>
 
     <hr>
 
-    <div col="1/2">
+    <cell class="c6">
       <h3>v1.0.1</h3>
-    </div>
+    </cell>
 
-    <div col="1/2">
+    <cell class="c6">
       <ul>
         <li>Added navigation</li>
         <li>Separated LESS files into components</li>
         <li>Included SVG icons</li>
       </ul>
-    </div>
+    </cell>
 </section>
 
 
@@ -218,8 +218,8 @@
     <h2>How to install</h2>
   </div>
 
-  <grid>
-    <div col="1/2">
+  <row>
+    <cell class="c6">
       <p><a att download
           href="https://github.com/longsien/BareCSS/releases/download/v1.1.0/BareCSS-v1.1.0.zip">Download</a> the
         package from <a att href="https://github.com/longsien/BareCSS" target="_blank">Github</a>.</p>
@@ -232,9 +232,9 @@
 
       <p>A <code>template.html</code> file is included to help you get started with the basic structure of the
         <code>nav</code> and <code>grid</code>.</p>
-    </div>
+    </cell>
 
-    <div col="1/2">
+    <cell class="c6">
       <p>What's included:</p>
 
 <!-- code -------------------------------------------------------- -->
@@ -269,8 +269,8 @@
   └── bare.less
 </code></pre>
 <!-- /code -----------------------------------------------------// -->
-    </div>
-  </grid>
+    </cell>
+  </row>
 
 </section>
 
@@ -353,8 +353,8 @@
     <h2>Typography</h2>
   </div>
 
-  <grid>
-    <div col="1/2">
+  <row>
+    <cell class="c6">
       <p>Font sizes in BareCSS are based in <code>rem</code>s. You can set the initial font size in the
         <code>html</code> element to change the scale. The default is <code>10px</code> so that 1rem is 10px and 2rem
         is 20px etc.</p>
@@ -363,17 +363,17 @@
         <code>_variables.less</code> file.
         <p>The main thing BareCSS does to headings is to standardise the margins and paddings. <code>h1</code> through
           to <code>h6</code> are catered for.</p>
-    </div>
+    </cell>
 
-    <div col="1/2">
+    <cell class="c6">
       <h1><code>h1</code> Heading level 1</h1>
       <h2><code>h2</code> Heading level 2</h2>
       <h3><code>h3</code> Heading level 3</h3>
       <h4><code>h4</code> Heading level 4</h4>
       <h5><code>h5</code> Heading level 5</h5>
       <h6><code>h6</code> Heading level 6</h6>
-    </div>
-  </grid>
+    </cell>
+  </row>
 </section>
 
 
@@ -402,18 +402,18 @@
 
   <hr>
 
-  <grid>
+  <row>
 
     <!-- anchor and submit buttons -->
 
-    <div col="1/3">
+    <cell class="c4">
       <h3>Anchor and submit buttons</h3>
 
       <p>You can style anchor links by adding the <code>btn</code> attribute and <code>input type=submit</code> will
         automatically be styled like a button.</p>
-    </div>
+    </cell>
 
-    <div col="2/3">
+    <cell class="c8">
       <p><a btn primary>Anchor link</a><input type="submit" value="Submit"></p>
 
 <!-- code -------------------------------------------------------- -->
@@ -424,20 +424,20 @@
 <input type="submit" value="Submit"></code></pre>
 <!-- /code -----------------------------------------------------// -->
 
-    </div>
+    </cell>
 
     <hr>
 
     <!-- full width buttons -->
 
-    <div col="1/3">
+    <cell class="c4">
       <h3>Full width buttons</h3>
 
       <p>If you want your buttons to be 100% width on mobile screens you can add the <code>m-full</code> attribute.
       </p>
-    </div>
+    </cell>
 
-    <div col="2/3">
+    <cell class="c8">
       <p>These buttons will be full width on mobile screens.</p>
 
       <p><button primary m-full>Primary button</button><button m-full>Default button</button><button disabled
@@ -454,19 +454,19 @@
 <button m-full disabled>Disabled button</button></code></pre>
 <!-- /code -----------------------------------------------------// -->
 
-    </div>
+    </cell>
 
     <hr>
 
     <!-- rounded buttons -->
 
-    <div col="1/3">
+    <cell class="c4">
       <h3>Rounded buttons</h3>
 
       <p>If you want your buttons to be rounded, use the <code>round</code> attribute.</p>
-    </div>
+    </cell>
 
-    <div col="2/3">
+    <cell class="c8">
       <p><button round primary>Primary button</button><button round>Default button</button><button disabled
           round>Disabled button</button></p>
 
@@ -481,8 +481,8 @@
 <button round disabled>Disabled button</button></code></pre>
 <!-- /code -----------------------------------------------------// -->
 
-    </div>
-  </grid>
+    </cell>
+  </row>
 
 </section>
 
@@ -493,12 +493,12 @@
     <h2>Tags</h2>
   </div>
 
-  <grid>
-    <div col="1/2">
+  <row>
+    <cell class="c6">
       <p>Tags use the <code>tag</code> element.</p>
-    </div>
+    </cell>
 
-    <div col="1/2">
+    <cell class="c6">
       <tag class="pri">One</tag>
       <tag>Two</tag>
       <tag>Three</tag>
@@ -511,8 +511,8 @@
       <tag>Ten</tag>
       <tag>Eleven</tag>
       <tag>Twelve</tag>
-    </div>
-  </grid>
+    </cell>
+  </row>
 
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- tags are inline block elements with margins -->
@@ -550,8 +550,8 @@
 
   <hr>
 
-  <grid>
-    <div col="1/2">
+  <row>
+    <cell class="c6">
       <h3>Disabled button tooltips</h3>
 
       <p>If you want to tell your user why a button is disabled then you can use the <code>dtt</code> attribute to
@@ -559,9 +559,9 @@
 
       <p>You can use both <code>tt</code> and <code>dtt</code> on the same element and the button
         <code>disabled</code> state will determine the tooltip shown.</p>
-    </div>
+    </cell>
 
-    <div col="1/2">
+    <cell class="c6">
       <p>Use the primary button to toggle the normal/disabled button.</p>
 
       <p>
@@ -578,20 +578,20 @@
 </code></pre>
 <!-- /code -----------------------------------------------------// -->
 
-    </div>
-  </grid>
+    </cell>
+  </row>
 
   <hr>
 
-  <grid>
-    <div col="1/2">
+  <row>
+    <cell class="c6">
       <h3>Anchor link tooltip</h3>
 
       <p>You can easily set a tooltip for an <a att href="https://github.com/longsien/BareCSS">anchor link</a> that
         shows the <code>href</code> on hover just by adding the <code>att</code> attribute.</p>
-    </div>
+    </cell>
 
-    <div col="1/2">
+    <cell class="c6">
 
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- anchor link tooltips with the att attribute -->
@@ -599,8 +599,8 @@
 </code></pre>
 <!-- /code -----------------------------------------------------// -->
 
-    </div>
-  </grid>
+    </cell>
+  </row>
 
 </section>
 
@@ -642,7 +642,7 @@
     <option>Option Three</option>
   </select>
 
-  <grid>
+  <row>
     <div col="1/2" fx>
       <p><input type="checkbox" id="checkbox-1"> <label for="checkbox-1">Checkbox 1</label><br><input type="checkbox"
           id="checkbox-2"> <label for="checkbox-2">Checkbox 2</label></p>
@@ -652,7 +652,7 @@
       <p><input type="radio" name="radio" id="radio-1"> <label for="radio-1">Radio 1</label><br><input type="radio"
           name="radio" id="radio-2"> <label for="radio-2">Radio 2</label></p>
     </div>
-  </grid>
+  </row>
 
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- select and option -->
@@ -736,8 +736,8 @@ Code line 3</code></pre>
   <p>As long as the <code>ul</code> or <code>ol</code> tag is classless or has the <code>xx</code> attribute the
     styles should apply to the child <code>li</code> elements too.</p>
 
-  <grid>
-    <div col="1/2">
+  <row>
+    <cell class="c6">
       <ul>
         <li>Unordered list item one</li>
         <li>Unordered list item two</li>
@@ -749,9 +749,9 @@ Code line 3</code></pre>
         </li>
         <li>Unordered list item four</li>
       </ul>
-    </div>
+    </cell>
 
-    <div col="1/2">
+    <cell class="c6">
       <ol>
         <li>Ordered list item one</li>
         <li>Ordered list item two</li>
@@ -763,8 +763,8 @@ Code line 3</code></pre>
         </li>
         <li>Ordered list item four</li>
       </ol>
-    </div>
-  </grid>
+    </cell>
+  </row>
 
 </section>
 
@@ -843,176 +843,164 @@ Code line 3</code></pre>
 
   <p><em>Note that each column in this grid will be 100% width on a mobile device.</em></p>
 
-  <grid>
-    <div col="1/12">
-      <div class="grid-example"><b>1/12</b></div>
-    </div>
-    <div col="11/12">
-      <div class="grid-example"><b>11/12</b></div>
-    </div>
-    <div col="1/6">
-      <div class="grid-example"><b>2/12</b> or <b>1/6</b></div>
-    </div>
-    <div col="5/6">
-      <div class="grid-example"><b>10/12</b> or <b>5/6</b></div>
-    </div>
-    <div col="1/4">
-      <div class="grid-example"><b>3/12</b> or <b>1/4</b></div>
-    </div>
-    <div col="3/4">
-      <div class="grid-example"><b>9/12</b> or <b>3/4</b></div>
-    </div>
-    <div col="1/3">
-      <div class="grid-example"><b>4/12</b> or <b>2/6</b> or <b>1/3</b></div>
-    </div>
-    <div col="2/3">
-      <div class="grid-example"><b>8/12</b> or <b>2/3</b></div>
-    </div>
-    <div col="5/12">
-      <div class="grid-example"><b>5/12</b></div>
-    </div>
-    <div col="7/12">
-      <div class="grid-example"><b>7/12</b></div>
-    </div>
-    <div col="1/2">
-      <div class="grid-example"><b>6/12</b> or <b>3/6</b> or <b>2/4</b> or <b>1/2</b></div>
-    </div>
-    <div col="1/2">
-      <div class="grid-example"><b>6/12</b> or <b>3/6</b> or <b>2/4</b> or <b>1/2</b></div>
-    </div>
-    <div col="1/1">
-      <div class="grid-example"><b>1/1</b></div>
-    </div>
-  </grid>
+  <row>
+    <cell class="c2">
+      <div class="grid-example"><b>.c2</b></div>
+    </cell>
+    <cell class="c10">
+      <div class="grid-example"><b>.c10</b></div>
+    </cell>
+    <cell class="c3">
+      <div class="grid-example"><b>.c3</b></div>
+    </cell>
+    <cell class="c9">
+      <div class="grid-example"><b>.c9</b></div>
+    </cell>
+    <cell class="c4">
+      <div class="grid-example"><b>.c4</b></div>
+    </cell>
+    <cell class="c8">
+      <div class="grid-example"><b>.c8</b></div>
+    </cell>
+    <cell class="c6">
+      <div class="grid-example"><b>.c6</b></div>
+    </cell>
+    <cell class="c6">
+      <div class="grid-example"><b>.c6</b></div>
+    </cell>
+    <cell class="c12">
+      <div class="grid-example"><b>.c12</b></div>
+    </cell>
+  </row>
 
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- no need for rows, grid will act as both row and container -->
-<grid>
-  <div col="1/3"></div>
-  <div col="2/3"></div>
+<row>
+  <cell class="c4"></cell>
+  <cell class="c8"></cell>
   
   <!-- new row -->
   
-  <div col="1/2"></div>
-  <div col="1/2"></div>
-</grid>
+  <cell class="c6"></cell>
+  <cell class="c6"></cell>
+</row>
 </code></pre>
 <!-- /code -----------------------------------------------------// -->
 
   <hr><!-- fixed grids -->
 
-  <grid>
-    <div col="1/3">
+  <row>
+    <cell class="c4">
       <h4>Fixed grids for mobile</h4>
 
       <p>The grid columns will automatically expand to 100% width when the viewport reaches the <code>@mobile</code>
         width. To prevent this, add the <code>fx</code> attribute to the column.</p>
-    </div>
+    </cell>
 
-    <div col="2/3">
-    <grid>
-      <div fx col="5/12">
-        <div class="grid-example"><b>5/12</b></div>
-      </div>
-      <div fx col="7/12">
-        <div class="grid-example"><b>7/12</b></div>
-      </div>
-      <div fx col="1/2">
-        <div class="grid-example"><b>1/2</b></div>
-      </div>
-      <div fx col="1/2">
-        <div class="grid-example"><b>1/2</b></div>
-      </div>
-    </grid>
+    <cell class="c8">
+    <row>
+      <cell class="a4">
+        <div class="grid-example"><b>.a4</b></div>
+      </cell>
+      <cell class="a8">
+        <div class="grid-example"><b>.a8</b></div>
+      </cell>
+      <cell class="a6">
+        <div class="grid-example"><b>.a6</b></div>
+      </cell>
+      <cell class="a6">
+        <div class="grid-example"><b>.a6</b></div>
+      </cell>
+    </row>
 
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- adding fx to the col will retain width on mobile -->
-<grid>
-  <div fx col="5/12"></div>
-  <div fx col="7/12"></div>
-</grid>
+<row>
+  <cell class="c4"></cell>
+  <cell class="c8"></cell>
+</row>
 </code></pre>
 <!-- /code -----------------------------------------------------// -->
 
-    </div>
-  </grid>
+    </cell>
+  </row>
 
   <hr><!-- nested grids -->
 
-  <grid>
-    <div col="1/3">
+  <row>
+    <cell class="c4">
       <h4>Nested grids</h4>
 
       <p>You can place a <code>grid</code> inside of <code>col</code> to nest grids. You can do this as many times
         as you like.</p>
-    </div>
+    </cell>
 
-    <div col="2/3">
-    <grid>
-      <div col="1/2">
+    <cell class="c8">
+    <row>
+      <cell class="c6">
         <div class="grid-example"><b>1/2</b></div>
-      </div>
-      <div col="1/2">
-      <grid>
-        <div col="1/1">
+      </cell>
+      <cell class="c6">
+      <row>
+        <cell class="c12">
           <div class="grid-example"><b>1/1</b></div>
-        </div>
-        <div col="1/2">
+        </cell>
+        <cell class="c6">
           <div class="grid-example"><b>1/2</b></div>
-        </div>
-        <div col="1/2">
+        </cell>
+        <cell class="c6">
           <div class="grid-example"><b>1/2</b></div>
-        </div>
-      </grid>
-      </div>
-    </grid>
+        </cell>
+      </row>
+      </cell>
+    </row>
 
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- you can nest a grid inside a col -->
-<grid>
-  <div col="1/2"></div>
-  <div col="1/2">
+<row>
+  <cell class="c6"></cell>
+  <cell class="c6">
   <!-- nested grid -->
-  <grid>
-    <div col="1/1"></div>
-    <div col="1/2"></div>
-    <div col="1/2"></div>
-  </grid>
-  </div>
-</grid>
+  <row>
+    <cell col="c12"></cell>
+    <cell col="c6"></cell>
+    <cell col="c6"></cell>
+  </row>
+  </cell>
+</row>
 </code></pre>
 <!-- /code -----------------------------------------------------// -->
 
-    </div>
-  </grid>
+    </cell>
+  </row>
 
   <hr><!-- grids with horizontal rule -->
 
-  <grid>
-    <div col="1/3">
+  <row>
+    <cell class="c4">
       <h4>Grids with horizontal rule</h4>
 
       <p>The examples you are looking at now are all <code>col</code>s within a <code>grid</code> separated by
         <code>hr</code>s.</p>
-    </div>
+    </cell>
 
-    <div col="2/3">
+    <cell class="c8">
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- you can use a hr to separate cols -->
-<grid>
-  <div col="1/2"></div>
-  <div col="1/2"></div>
+<row>
+  <cell class="c6"></cell>
+  <cell class="c6"></cell>
   
   <hr>
   
-  <div col="1/2"></div>
-  <div col="1/2"></div>
-</grid>
+  <cell class="c6"></cell>
+  <cell class="c6"></cell>
+</row>
 </code></pre>
 <!-- /code -----------------------------------------------------// -->
 
-  </div>
-  </div>
+  </cell>
+  </row>
 
 </section>
 
@@ -1026,32 +1014,32 @@ Code line 3</code></pre>
   <p>Cards use the also totally non-compliant <code>card</code> element but works fine in IE9+. These cards are meant
     to be used within a grid.</p>
 
-  <grid>
-    <div col="1/3">
+  <row>
+    <cell class="c4">
     <card>
       <h5>Card one</h5>
       <hr>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </card>
-    </div>
+    </cell>
 
-    <div col="1/3">
+    <cell class="c4">
     <card>
       <h5>Card two</h5>
       <hr>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
     </card>
-    </div>
+    </cell>
 
-    <div col="1/3">
+    <cell class="c4">
     <card>
       <h5>Card three</h5>
       <hr>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
         dolore magna aliqua. Ut enim ad minim veniam.</p>
     </card>
-    </div>
-  </grid>
+    </cell>
+  </row>
 
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- card element -->
@@ -1060,31 +1048,31 @@ Code line 3</code></pre>
  </card>
 
 <!-- card within a grid -->
-<grid>
-  <div col="1/2">
+<row>
+  <cell class="c6">
   <card>
     <h5>Card title</h5>
     <hr>
     <p>Your content here</p>
   </card>
-  </div>
+  </cell>
   
-  <div col="1/2">
+  <cell class="c6">
   <card>
     <h5>Card title</h5>
     <hr>
     <p>Your content here</p>
   </card>
-  </div>
-</grid></code></pre>
+  </cell>
+</row></code></pre>
 <!-- /code -----------------------------------------------------// -->
 
   <hr>
 
   <h3>Cards with images</h3>
 
-  <grid>
-    <div col="1/3">
+  <row>
+    <cell class="c4">
     <card>
       <img src="http://barecss.com/img/sign.jpg">
       <h5>Top image</h5>
@@ -1102,9 +1090,9 @@ Code line 3</code></pre>
 </card></code></pre>
 <!-- /code -----------------------------------------------------// -->
 
-      </div>
+    </cell>
 
-    <div col="1/3">
+    <cell class="c4">
     <card>
       <h5>Middle image</h5>
       <img src="http://barecss.com/img/wing.jpg">
@@ -1122,9 +1110,9 @@ Code line 3</code></pre>
 </card></code></pre>
 <!-- /code -----------------------------------------------------// -->
 
-    </div>
+    </cell>
 
-    <div col="1/3">
+    <cell class="c4">
     <card>
       <h5>Bottom image</h5>
       <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
@@ -1141,8 +1129,8 @@ Code line 3</code></pre>
   <img src="http://barecss.com/img/sign.jpg" alt="sign">
 </card></code></pre>
 <!-- /code -----------------------------------------------------// -->
-    </div>
-  </grid>
+    </cell>
+  </row>
 </section>
 
 
@@ -1249,33 +1237,33 @@ Code line 3</code></pre>
 <!-- code -------------------------------------------------------- -->
 <pre class="language-markup"><code class="esc"><!-- the footer background will expand to 100% of viewport but contents will be contained to standard width -->
 <footer>
-  <grid>
-    <div col="1/2">
+  <row>
+    <cell class="c6">
       <p>Created by <a att href="http://www.longsien.com" target="_blank">Long Sien</a></p>
-    </div>
+    </cell>
     
-    <div col="1/2" txt="r">
+    <cell class="c6 right">
       <a att href="https://github.com/longsien/BareCSS" target="_blank">
         <img class="github-icon" src="http://barecss.com/img/github.svg">
       </a>
-    </div>
-  </grid>
+    </cell>
+  </row>
 </footer></code></pre>
 <!-- /code -----------------------------------------------------// -->
 </section>
 
 
 <footer>
-<grid>
-  <div fx col="3/4">
+<row>
+  <cell class="c9">
     <p>Created by <a att href="http://www.longsien.com" target="_blank">Long Sien</a></p>
-  </div>
+  </cell>
   
-  <div fx col="1/4" txt="r">
+  <cell class="c3 right">
     <a att href="https://github.com/longsien/BareCSS" target="_blank">
       <img class="github-icon" src="http://barecss.com/img/github.svg"></a>
-  </div>
-</grid>
+  </cell>
+</row>
 </footer>
 
 
