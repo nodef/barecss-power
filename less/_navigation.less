@@ -189,12 +189,12 @@ nav {
 // mobile view
 @media (max-width: @mobile) {
   
-  // clears page for fixed nav
+  // page gap for nav
   body {
     padding-top: @nav-height;
   }
   
-  // keeps the nav fixed
+  // fixed nav
   nav {
     position: fixed;
     top: 0;
@@ -227,42 +227,38 @@ nav {
         overflow-x: visible;
         overflow-y: auto;
         text-align: left;
-        
         li {
           display: block;
           border-top: 1px solid @menu-border;
         }
-        
         a {
           border: none;
-          padding: 1rem 6rem 1rem 2rem;
+          padding: 1em 3em;
         }
       }
-            
+      
       input {
         &:checked {
-          
-          // shows the nav when input is checked
+          //show nav
           ~ ul { transform: none; }
-          
-          // hides the hamburger and shows the cross when the input is checked
+          // hide hamburger
           ~ header {
-            &:before {
+            &::before {
               transform: rotate(-180deg);
               opacity: 0;
             }
-            
-            &:after {
+            // hide close
+            &::after {
               transform: none;
               opacity: 1;
             }
           }
         }
       }
-      
+      // dropdown
       menu {
         menuitem { border-color: @dd-border;	}
-        a { padding-left: 4rem;	}
+        a { padding-left: 4em;	}
       }
     }
   }
