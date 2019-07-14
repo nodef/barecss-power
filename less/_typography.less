@@ -6,20 +6,32 @@
 @selection-text: @sec-text;
 
 
-// body
+// tints
 body {
   background: @def-back;
-  line-height: 1.8;
   color: @def-text;
 }
-.sec, [sec], [secondary] {
+.sec {
   background: @sec-back;
   color: @sec-text;
 }
-.pri, [pri], [primary] {
+.pri {
   background: @pri-back;
   color: @pri-text;
 }
+.dark {
+  background: @def-text;
+  color: @def-back;
+}
+.dark.sec {
+  background: @sec-text;
+  color: @sec-back;
+}
+.dark.pri {
+  background: @pri-text;
+  color: @pri-back;
+}
+
 
 // headings
 h1, h2, h3, h4, h5, h6 { margin: 0 0 2em; font-weight: bold; }
