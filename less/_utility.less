@@ -1,16 +1,15 @@
 @import (reference) "config";
 
 
-// display
-.wide    { width: 100% }
+// margin
+.wide { width: 100%; margin-left: 0; margin-right: 0; }
+.narrow { margin: auto; } 
 
-// fonts
-.z, .xx-large { font-size: 2em / 1; }
-.y, .x-large  { font-size: 2em / 1; }
-.x, .large    { font-size: 5em / 4; }
-.w, .small    { font-size: 4em / 5; }
-.v, .x-small  { font-size: 1em / 2; }
-.u, .xx-small { font-size: 1em / 2; }
+// size
+.xs, .x-small { font-size: @size-xs; }
+.s,  .small   { font-size: @size-s; }
+.l,  .large   { font-size: @size-l; }
+.xl, .x-large { font-size: @size-xl; }
 
 // text alignment
 .tl, .left    { text-align: left; }

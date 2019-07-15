@@ -72,7 +72,7 @@ select {
   padding: 0.3em 1.8em 0.3em 0.6em;
   background: #fff data-uri('../icons/chevron-down.svg') no-repeat right 0.6em center;
   background-size: 1.2em;
-  font-size: @fs-m;
+  font-size: inherit; // @fs-m;
   font-weight: 300;
   text-indent: 0.3em;
   
@@ -134,7 +134,7 @@ input {
   // eg: <input type="radio" name="radio" id="radio-1"> <label for="radio-1">Select me</label>
   &[type=radio] {
     + label {
-      font-size: @fs-m;
+      font-size: inherit; // @fs-m;
       font-weight: 200;
       
       &:before { border-radius: 100% }
@@ -163,7 +163,7 @@ input {
   // eg: <input type="checkbox" id="checkbox-1"> <label for="checkbox-1">Check me</label>
   &[type=checkbox] {
     + label {
-      font-size: @fs-m;
+      font-size: inherit; // @fs-m;
       font-weight: 200;
       
       &:before { border-radius: 2px }
