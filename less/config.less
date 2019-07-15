@@ -32,15 +32,14 @@
 
 
 // widths
-@width:  60rem;
-@mobile: 50rem;
-
 @view-a: 200px;
 @view-b: 400px;
 @view-c: 800px;
 @view-d: 1600px;
 @view-e: 3200px;
 @view-f: 6400px;
+@mobile: @view-c;
+@width: (@view-b + @view-c) / 2;
 
 
 // media query
@@ -56,6 +55,8 @@
 @view-ep: ~'(min-width:' @view-e+1 ~')';
 @view-fn: ~'(max-width:' @view-f   ~')';
 @view-fp: ~'(min-width:' @view-f+1 ~')';
+@mobilen: ~'(max-width:' @mobile   ~')';
+@mobilep: ~'(min-width:' @mobile+1 ~')';
 
 
 // lighten or darken color by a precent

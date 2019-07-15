@@ -60,7 +60,7 @@ nav {
     }
     
     // menu -> dropdown open
-    @media (min-width: (@mobile + .1)) {
+    @media @mobilep {
       li:hover menu, menu:hover {
         pointer-events: auto;
         transform: translate3d(0,0,0);
@@ -80,7 +80,7 @@ nav {
       text-transform: none;
       
       // menu with dropdown
-      @media (min-width: (@mobile + .1)) {
+      @media @mobilep {
         &:not(:only-child) {
           padding-right: 2em;
           background-image: data-uri('../icons/chevron-down.svg');
@@ -109,7 +109,7 @@ nav {
     text-align: left;
     line-height: 1em;
     
-    @media (min-width: (@mobile + .1)) {
+    @media @mobilep {
       pointer-events: none;
       position: absolute;
       top: 100%;
@@ -187,7 +187,7 @@ nav {
 }
 
 // mobile view
-@media (max-width: @mobile) {
+@media @mobilen {
   
   // page gap for nav
   body {
