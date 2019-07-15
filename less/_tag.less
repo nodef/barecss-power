@@ -5,15 +5,21 @@
 @tag-font: 0.8em;
 @tag-back: .twinkle(@def-back, 10%)[x];
 @tag-border: .twinkle(@def-back, 15%)[x];
+@tag-border-size: 0.1rem;
+@tag-radius: 0.6em;
+@tag-gap: 0.3em;
+@tag-space: 0.3em;
+@tag-pad: 0.7em;
+@tag-padv: 0.1em;
 
 
 tag {
   // default
   display: inline-block;
-  margin: 0 0.3em 0.3em 0;
-  border-bottom: 1px solid @tag-border;
-  border-radius: 0.6em;
-  padding: 0.1em 0.7em;
+  margin: 0 @tag-gap @tag-space 0;
+  border-bottom: @tag-border-size solid @tag-border;
+  border-radius: @tag-radius;
+  padding: @tag-padv @tag-pad;
   background: @tag-back;
   font-size: @tag-font;
 }
