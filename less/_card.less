@@ -4,39 +4,43 @@
 // config
 @card-shadow: @box-shadow;
 @card-back: @def-back;
+@card-space: 1.2em;
+@card-radius: 0.2em;
+@card-pad: 1.2em;
+@card-hr-gap: @card-pad / 2;
 
 
 card {
   display: block;
-  margin-bottom: 1.2em;
+  margin-bottom: @card-space;
   box-shadow: @card-shadow;
-  border-radius: 2px;
-  padding: 1.2em;
+  border-radius: @card-radius;
+  padding: @card-pad;
   background: @card-back;
   
-  hr { margin: 0.6em 0; }
+  hr { margin: @card-hr-gap 0; }
   
   &:last-child { margin-bottom: 0 }
   
   // sets the image to full width
   > img {
     display: block;
-    width: ~"calc(100% + 2.4em)";
+    width: ~"calc(100% + " 2 * @card-pad ~")";
     max-width: none;
-    margin: 0 0 1.2em -1.2em;
+    margin: 0 0 @card-pad -@card-pad;
     
     // applies if image is first item in card
     &:first-child {
-      margin: -1.2em 0 1.2em -1.2em;
-      border-top-left-radius: 2px;
-      border-top-right-radius: 2px;
+      margin: -@card-pad 0 @card-pad -@card-pad;
+      border-top-left-radius: @card-radius;
+      border-top-right-radius: @card-radius;
     }
     
     // applies if image is last item in card
     &:last-child {
-      margin: 0 0 -1.2em -1.2em;
-      border-bottom-left-radius: 2px;
-      border-bottom-right-radius: 2px;
+      margin: 0 0 -@card-pad -@card-pad;
+      border-bottom-left-radius: @card-radius;
+      border-bottom-right-radius: @card-radius;
     }
   }
 }
