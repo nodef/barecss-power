@@ -2,15 +2,34 @@
 
 
 // config
-@norm-color:  @pri-back;
-@norm-back: #fff;
-@disabled-color: @grey-mid;
-@button-color: @def-text;
+@button-font: @size-s;
+@button-text: @def-text;
+@button-weight: bold;
 @button-back: darken(@def-back, 10%);
+@button-line: 1em;
+@button-gap: 0.6em;
+@button-gapv: @button-gap;
+@button-pad: 1.2em;
+@button-padv: 1em;
 @button-border: @def-text;
-@disabled-border: @grey-light;
-@disabled-back: @grey-light;
-@disabled-text: @grey-dark;
+@button-border-size: 0.1em;
+@button-radius: 0.2em;
+@button-shadow: 0 0 0 rgba(0,0,0,0);
+@button-hover: initial;
+@button-hover-back: @button-back;
+@button-hover-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+@primary-border: lighten(@pri-back, 10%);
+@primary-back: @pri-back;
+@primary-text: @pri-text;
+@primary-hover: initial;
+@primary-hover-back: lighten(@primary-back, 10%);
+
+@disabled-back: @darken(@def-back, 20%);
+@disabled-border: @disabled-back;
+@disabled-text: lighten(@def-text, 20%);
+
+@round-radius: 2.4em;
 
 
 // normal
@@ -18,15 +37,15 @@ button, input[type=button], input[type=submit], [btn] {
   cursor: pointer;
   -webkit-appearance: none;
   display: inline-block;
-  margin: 0 0.6em 0.6em 0;
-  box-shadow: 0 0 0 rgba(0,0,0,0);
-  border: 1px solid @button-border;
-  border-radius: 2px;
-  padding: 1em 1.2em;
+  margin: 0 @button-gap @button-gapv 0;
+  box-shadow: @button-shadow;
+  border: @button-border-size solid @button-border;
+  border-radius: @button-radius;
+  padding: @button-padv @button-pad; // @button-padding
   background: @button-back;
-  line-height: 1rem; // 
-  font-size: @size-s; // @fs-s; // 
-  font-weight: 700; // 
+  line-height: @button-line;
+  font-size: @button-font;
+  font-weight: @button-weight;
   color: @button-color;
   text-transform: uppercase;
   text-decoration: none;
@@ -46,8 +65,9 @@ button, input[type=button], input[type=submit], [btn] {
   }
   
   &:not(:disabled):hover {
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    background: @button-back;
+    box-shadow: @button-hover-shadow;
+    background: @button-hover-back;
+    color: @button-hover;
     
     &:active {
       box-shadow: none;
@@ -57,12 +77,14 @@ button, input[type=button], input[type=submit], [btn] {
   
   // primary
   &[primary] {
-    border-color: lighten(@pri-back, 10%);
-    background: @pri-back;
-    font-weight: 700;
-    color: @pri-text;
+    border-color: @primary-border;
+    background: @primary-back;
+    color: @primary-text;
     
-    &:not(:disabled):hover { background: lighten(@pri-back, 10%)	}
+    &:not(:disabled):hover {
+      background: @primary-hover-back;
+      color: @primary-hover;
+    }
   }
 
   // disabled
@@ -73,8 +95,6 @@ button, input[type=button], input[type=submit], [btn] {
     color: @disabled-text;
   }
   
-  &[round] { border-radius: 2.4em; }
-  &[m-full] {
-    @media @mobilen { width: 100% }
-  }
+  // round
+  &[round] { border-radius: @round-radius; }
 }
