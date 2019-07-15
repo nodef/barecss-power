@@ -49,7 +49,7 @@
 @view-e: 3200px;
 @view-f: 6400px;
 @mobile: @view-c;
-@width: (@view-b + @view-c) / 2;
+@width: @view-c; // (@view-b + @view-c) / 2;
 
 
 // media query
@@ -77,4 +77,9 @@
 // set background to color difference
 .backdiff(@a, @b) {
   background: difference(@a, @b);
+}
+
+.apperance(@x) {
+  -webkit-appearance: @x;
+  appearance: @x;
 }

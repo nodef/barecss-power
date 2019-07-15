@@ -2,17 +2,19 @@
 
 
 // config
+@list-padl: @pad-s;
+@list-marginb: @margin-s;
+@list-line: 2.5;
 @ul-style1: disc;
 @ul-style2: circle;
 @ol-style1: decimal;
 @ol-style2: lower-alpha;
-@list-padl: @pad-s;
-@list-marginb: @margin-s;
 
 
 ul, ol {
   margin: 0 0 @list-marginb;
   padding-left: @list-padl;
+  line-height: @list-line;
   ul, ol { margin-bottom: 0 }
 }
 

@@ -1,18 +1,19 @@
 @import (reference) "config";
 
 
-@lab-margint: 0.6em;
+@lab-margint: 1em;
+@lab-marginr: 1em;
 @lab-font: 1em;
 @lab-weight: bold;
 @lab-transform: uppercase;
 
-@inp-marginb: 1.2em;
+@inp-marginb: 1.5em;
 @inp-font: 1em;
 @inp-color: inherit;
 @inp-borderc: darken(@def-back, 20%);
 @inp-borderb: 0.2em;
-@inp-padt: 0.3em;
-@inp-padb: 0.6em;
+@inp-padv: 1em;
+@inp-padh: 0.5em;
 @inp-back: transparent;
 @inp-weight: inherit;
 @inp-hborderc: @sec-back;
@@ -25,24 +26,29 @@
 @tarea-radius: 1.5 * @radius-s;
 @tarea-padr: 1.2em;
 
-@sel-height: 2.4em;
+@sel-height: 3em;
 @sel-borderc: @grey-light;
 @sel-border: 0.1em;
 @sel-radius: @radius-s;
-@sel-back: #fff;
+@sel-back: @def-back;
 @sel-arrow: 1.2em;
 @sel-font: inherit;
 @sel-weight: normal;
 @sel-indent: 0.3em;
 @sel-htext: initial;
 @sel-hback: initial;
-@sel-hborderc: @pri-back;
+@sel-hborderc: @sec-back;
+@sel-margint: 0.3em;
+@sel-marginb: 1.2em;
+@sel-padv: 0.3em;
+@sel-padr: 1.8em;
+@sel-padl: 0.6em;
 
-@cho-width: 1.2em;
-@cho-height: 1.2em;
+@cho-width: 1.5em;
+@cho-height: 1.5em;
 @cho-borderc: @grey-dark;
 @cho-border: 0.1em;
-@cho-back: #fff;
+@cho-back: @def-back;
 
 @rad-font: inherit;
 @rad-weight: 200;
@@ -62,6 +68,7 @@ label {
   display: inline-block;
   width: 100%;
   margin-top: @lab-margint;
+  margin-right: @lab-marginr;
   font-size: @lab-font;
   font-weight: @lab-weight;
   text-transform: @lab-transform;
@@ -76,7 +83,7 @@ label {
   border: none;
   border-radius: 0;
   border-bottom: @inp-borderb solid @inp-borderc;
-  padding: @inp-padt 0 @inp-padb;
+  padding: @inp-padv @inp-padh;
   background: @inp-back;
   font-size: @inp-font;
   font-weight: @inp-weight;
@@ -107,15 +114,15 @@ textarea {
 // select
 select {
   cursor: pointer;
-  appearance: none;
+  .apperance(none);
   display: block;
   width: 100%;
   height: @sel-height;
   border: @sel-border solid @sel-borderc;
   border-radius: @sel-radius;
-  margin: 0.3em 0 1.2em;
-  padding: 0.3em 1.8em 0.3em 0.6em;
-  background: @sel-back data-uri('../icons/chevron-down.svg') no-repeat right 0.6em center;
+  margin: @sel-margint 0 @sel-marginb;
+  padding: @sel-padv @sel-padr @sel-padv @sel-padl;
+  background: @sel-back data-uri('../icons/chevron-down.svg') no-repeat right @sel-padl center;
   background-size: @sel-arrow;
   font-size: @sel-font;
   font-weight: @sel-weight;
