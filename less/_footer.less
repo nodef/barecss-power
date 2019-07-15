@@ -2,8 +2,9 @@
 
 
 // config
-@footer-text: @pri-text;
-@footer-back: @pri-back;
+@footer-text: @sec-text;
+@footer-back: @sec-back;
+@footer-pad: 2rem;
 
 
 // sticky footer
@@ -19,6 +20,9 @@ header, footer {
   background-color: @pri-back;
 }
 footer {
+  padding: @footer-pad;
+  background: @footer-back;
+  color: @footer-text;
   overflow: hidden;
 }
 main {
