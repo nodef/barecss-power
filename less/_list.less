@@ -1,20 +1,27 @@
 @import (reference) "config";
 
 
+// config
+@list-gap: 1em;
+@list-space: 1em;
+@ul-style1: disc;
+@ul-style2: circle;
+@ol-style1: decimal;
+@ol-style2: lower-alpha;
+
+
 ul, ol {
-  & {
-    margin: 0 0 1em;
-    padding-left: 1em;
-    ul, ol { margin-bottom: 0 }
-  }
+  margin: 0 0 @list-space;
+  padding-left: @list-gap;
+  ul, ol { margin-bottom: 0 }
 }
 
 ul {
-  list-style: disc;
-  ul { list-style: circle }
+  list-style: @ul-style1;
+  ul { list-style: @ul-style2; }
 }
 
 ol {
-  list-style: decimal;
-  ol { list-style: lower-alpha }
+  list-style: @ol-style1;
+  ol { list-style: @ol-style2; }
 }
