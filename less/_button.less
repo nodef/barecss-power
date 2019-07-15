@@ -25,7 +25,7 @@
 @primary-hover: initial;
 @primary-hover-back: lighten(@primary-back, 10%);
 
-@disabled-back: @darken(@def-back, 20%);
+@disabled-back: darken(@def-back, 20%);
 @disabled-border: @disabled-back;
 @disabled-text: lighten(@def-text, 20%);
 
@@ -41,12 +41,12 @@ button, input[type=button], input[type=submit], [btn] {
   box-shadow: @button-shadow;
   border: @button-border-size solid @button-border;
   border-radius: @button-radius;
-  padding: @button-padv @button-pad; // @button-padding
+  padding: @button-padv @button-pad;
   background: @button-back;
   line-height: @button-line;
   font-size: @button-font;
   font-weight: @button-weight;
-  color: @button-color;
+  color: @button-text;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
