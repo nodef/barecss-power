@@ -2,24 +2,27 @@
 
 
 // config
+@table-space: 1.1em;
 @th-back:  @def-back;
 @th-hover: darken(@def-back, 10%);
 @th-text:  @def-text;
 @tr-border: darken(@def-back, 15%);
+@tr-border-size: 0.2em;
 @tr-hover:  darken(@def-back, 10%);
-
+@tr-padv: 0.8em;
+@td-border-size: 0.1em;
 
 table {
   width: 100%;
-  margin-bottom: 1.1em;
+  margin-bottom: @table-space;
   border-collapse: collapse;
   border-spacing: 0;
   text-align: left;
   overflow: hidden;
   
   th, td {
-    border-bottom: 2px solid @tr-border;
-    padding: 0.8em;
+    border-bottom: @tr-border-size solid @tr-border;
+    padding: @tr-padv;
   }
   
 	th {
@@ -43,7 +46,7 @@ table {
 		}
 	}
   
-  td { border-bottom-width: 1px }
+  td { border-bottom-width: @td-border-size; }
 
   tbody > tr:hover { background: @tr-hover; }
 }

@@ -4,20 +4,25 @@
 // config
 @bq-border: @sec-back;
 @bq-back: lighten(@sec-back, 10%);
+@bq-font: 1.1em;
+@bq-space: 2em;
+@bq-pad: 2em;
+@bq-padv: 1em;
+@bq-quote-font: 3em;
 
 
 // box
 blockquote {
-  margin: 2em 0;
+  margin: @bq-space 0;
   border-left: 1em solid @bq-border;
-  padding: 1em 2em;
+  padding: @bq-padv @bq-pad;
   background: @bq-back;
-  font-size: 1.1em;
+  font-size: @bq-font;
 
   // open quote
   &:before {
     content: open-quote;
-    font-size: 3em;
+    font-size: @bq-quote-font;
     line-height: 0.5;
   }
 }
