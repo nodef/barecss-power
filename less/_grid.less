@@ -3,6 +3,7 @@
 
 // config
 @columns: 12;
+@cell-pad: 1rem;
 
 
 // set width
@@ -16,14 +17,14 @@ row, .row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: -1rem;
+  margin: -@cell-pad;
 }
 
 
 // cell (column)
 cell, .cell {
   display: inline-block;
-  padding: 1rem;
+  padding: @cell-pad;
   vertical-align: top;
 }
 

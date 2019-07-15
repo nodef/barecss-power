@@ -2,18 +2,20 @@
 
 
 // config
-@border: @grey-light;
-@code-back:   #eee;
-@text:   @grey-ultradark;
+@code-back: darken(@def-back, 10%);
+@code-border: @grey-light;
+@code-text: @grey-ultradark;
+@code-radius: @radius-s;
+@code-pad: 1.2 * @pad-s;
 
 
 code:not([class]) {
   display: inline-block;
-  border: 1px solid @border;
-  border-radius: 2px;
+  border: 1px solid @code-border;
+  border-radius: @code-radius;
   padding: 0 0.4em;
   background: @code-back;
-  font-family: monospace; // do some magic
+  // font-family: monospace; // do some magic
   // font-size: 1.2em !important; // (not needed)
   // font-weight: normal;
   // line-height: 1.8;
@@ -28,6 +30,6 @@ pre:not([class]) {
     border: none;
     // border-left: 4px solid @pri-back; // (uncomment)
     border-radius: 0;
-    padding: 1.2em;
+    padding: @code-pad;
   }
 }

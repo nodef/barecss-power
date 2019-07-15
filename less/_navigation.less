@@ -6,47 +6,48 @@
 @nav-text: @pri-text;
 @nav-font: 1.5rem;
 @nav-height: 5rem;
-@nav-gap: 2rem;
+@nav-padh: 2rem;
 
 @logo-font: 1em;
-@logo-gap: 0.5em;
+@logo-marginr: 0.5em;
 @title-font: 1.5em;
 
 @menu-font: 1em;
-@menu-gap: 1em;
-@menu-hover: @sec-text;
-@menu-hover-back: initial;
-@menu-decor: @sec-back;
-@menu-decor-size: 0.4rem;
+@menu-padh: 1em;
+@menu-htext: @sec-text;
+@menu-hback: initial;
+@menu-decoc: @sec-back;
+@menu-decob: 0.4rem;
 @menu-arrow: 1em;
-@menu-arrow-gap: 1.5em;
+@menu-arrow-padr: 1.5em;
 
 @dd-font: 0.8em;
 @dd-back: lighten(@nav-back, 20%);
 @dd-line: 2em;
-@dd-decor: lighten(@def-text, 10%);
-@dd-decor-size: 0.4rem;
-@dd-hover: initial;
-@dd-hover-back: darken(@def-back, 10%);
-@dd-gap: 1.5em;
+@dd-decoc: lighten(@def-text, 10%);
+@dd-decol: 0.4rem;
+@dd-htext: initial;
+@dd-hback: darken(@def-back, 10%);
+@dd-padh: 1.5em;
 @dd-shadow: @box-shadow;
 
-@sidenav-line: 4em;
-@sidenav-gap: 3em;
-@sidenav-back: @dd-back;
-@sidenav-menu-size: initial;
-@sidenav-border: darken(@def-back, 10%);
-@sidenav-border-size: 0.1rem;
-@sidenav-decor: @dd-decor;
-@sidenav-decor-size: 0.1rem;
-@sidenav-shadow: @box-shadow;
+@snav-line: 4em;
+@snav-padh: 3em;
+@snav-back: @dd-back;
+@snav-menu: initial;
+@snav-borderc: darken(@def-back, 10%);
+@snav-bordert: 0.1rem;
+@snav-shadow: @box-shadow;
+
+@smenu-borderc: @dd-decoc;
+@smenu-bordert: 0.1rem;
 
 
 // main nav
 nav {
   z-index: 10;
   width: 100%;
-  padding: 0 @nav-gap;
+  padding: 0 @nav-padh;
   background: @nav-back; // ?
   font-size: @nav-font;
   color: @nav-text; // ?
@@ -89,8 +90,8 @@ nav {
     a {
       cursor: pointer;
       display: block;
-      border-bottom: @menu-decor-size solid transparent;
-      padding: 0 @menu-gap;
+      border-bottom: @menu-decob solid transparent;
+      padding: 0 @menu-padh;
       font-weight: normal;
       text-decoration: none;
       text-transform: none;
@@ -98,7 +99,7 @@ nav {
       // menu with dropdown
       @media @mobilep {
         &:not(:only-child) {
-          padding-right: @menu-arrow-gap;
+          padding-right: @menu-arrow-padr;
           background-image: data-uri('../icons/chevron-down.svg');
           background-repeat: no-repeat;
           background-position: right center;
@@ -108,9 +109,9 @@ nav {
       
       // on menu hover
       &:hover {
-        border-color: @menu-decor;
-        background-color: @menu-hover-back;
-        color: @menu-hover;
+        border-color: @menu-decoc;
+        background-color: @menu-hback;
+        color: @menu-htext;
       }
     }
   }
@@ -140,18 +141,18 @@ nav {
     // drop down item
     menuitem {
       display: block;
-      border-left: @dd-decor-size solid transparent;
+      border-left: @dd-decol solid transparent;
       
       &:hover {
-        border-color: @dd-decor;
-        background-color: @dd-hover-back;
-        color: @dd-hover;
+        border-color: @dd-decoc;
+        background-color: @dd-hback;
+        color: @dd-htext;
         a { transform: translate3d(0.5em,0,0) }
       }
       
       a {
         border: none;
-        padding: 0 @dd-gap;
+        padding: 0 @dd-padh;
         font-size: @dd-font;
       }
     }
@@ -164,12 +165,12 @@ nav {
       display: none;
       position: absolute;
       top: 0;
-      right: @nav-gap;
+      right: @nav-padh;
       width: @nav-height;
       height: @nav-height;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: @sidenav-menu-size;
+      background-size: @snav-menu;
     }
     
     // hamburger
@@ -192,13 +193,13 @@ nav {
       font-size: @title-font;
       line-height: @nav-height;
       text-decoration: none;
-      padding-left: @nav-gap;
+      padding-left: @nav-padh;
       
       // logo
       img {
         top: -2px;
         height: @logo-font;
-        margin-right: @logo-gap;
+        margin-right: @logo-marginr;
         vertical-align: middle;
       }
     }
@@ -237,21 +238,21 @@ nav {
         bottom: 0;
         right: 0;
         transform: translate3d(100%,0,0);
-        box-shadow: @sidenav-shadow;
-        border-top: @sidenav-border-size solid @sidenav-border;
+        box-shadow: @snav-shadow;
+        border-top: @snav-bordert solid @snav-borderc;
         padding: 0;
-        background: @sidenav-back;
-        line-height: @sidenav-line;
+        background: @snav-back;
+        line-height: @snav-line;
         overflow-x: visible;
         overflow-y: auto;
         text-align: left;
         li {
           display: block;
-          border-top: @sidenav-decor-size solid @sidenav-decor;
+          border-top: @smenu-bordert solid @smenu-borderc;
         }
         a {
           border: none;
-          padding: 0 @sidenav-gap;
+          padding: 0 @snav-padh;
         }
       }
       
@@ -275,8 +276,8 @@ nav {
       }
       // dropdown
       menu menuitem a {
-        padding: 0 @sidenav-gap + @dd-gap;
-        border-color: @dd-decor;
+        padding: 0 @snav-padh + @dd-padh;
+        border-color: @dd-decoc;
       }
     }
   }

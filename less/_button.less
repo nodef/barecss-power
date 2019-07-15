@@ -2,34 +2,34 @@
 
 
 // config
-@button-font: @size-s;
-@button-text: @def-text;
-@button-weight: bold;
-@button-back: darken(@def-back, 10%);
-@button-line: 1em;
-@button-gap: 0.6em;
-@button-gapv: @button-gap;
-@button-pad: 1.2em;
-@button-padv: 1em;
-@button-border: @button-back;
-@button-border-size: 0.1em;
-@button-radius: 0.2em;
-@button-shadow: 0 0 0 rgba(0,0,0,0);
-@button-hover: initial;
-@button-hover-back: @button-back;
-@button-hover-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+@btn-font: @size-s;
+@btn-text: @def-text;
+@btn-weight: bold;
+@btn-back: darken(@def-back, 10%);
+@btn-line: 1em;
+@btn-marginh: 0.6em;
+@btn-marginb: @btn-marginh;
+@btn-padh: 1.2em;
+@btn-padv: 1em;
+@btn-border: 0.1em;
+@btn-borderc: @btn-back;
+@btn-radius: @radius-s;
+@btn-shadow: 0 0 0 rgba(0,0,0,0);
+@btn-htext: initial;
+@btn-hback: @btn-back;
+@btn-hshadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 
-@primary-border: lighten(@pri-back, 10%);
-@primary-back: @pri-back;
-@primary-text: @pri-text;
-@primary-hover: initial;
-@primary-hover-back: lighten(@primary-back, 10%);
+@bpri-borderc: lighten(@pri-back, 10%);
+@bpri-back: @pri-back;
+@bpri-text: @pri-text;
+@bpri-htext: initial;
+@bpri-hback: lighten(@bpri-back, 10%);
 
-@disabled-back: darken(@def-back, 20%);
-@disabled-border: @disabled-back;
-@disabled-text: lighten(@def-text, 50%);
+@bdis-back: darken(@def-back, 20%);
+@bdis-borderc: @bdis-back;
+@bdis-text: lighten(@def-text, 50%);
 
-@round-radius: 2.4em;
+@brnd-radius: @radius-xl;
 
 
 // normal
@@ -37,16 +37,16 @@ button, input[type=button], input[type=submit], [btn] {
   cursor: pointer;
   -webkit-appearance: none;
   display: inline-block;
-  margin: 0 @button-gap @button-gapv 0;
-  box-shadow: @button-shadow;
-  border: @button-border-size solid @button-border;
-  border-radius: @button-radius;
-  padding: @button-padv @button-pad;
-  background: @button-back;
-  line-height: @button-line;
-  font-size: @button-font;
-  font-weight: @button-weight;
-  color: @button-text;
+  margin: 0 @btn-marginh @btn-marginb 0;
+  box-shadow: @btn-shadow;
+  border: @btn-border solid @btn-borderc;
+  border-radius: @btn-radius;
+  padding: @btn-padv @btn-padh;
+  background: @btn-back;
+  line-height: @btn-line;
+  font-size: @btn-font;
+  font-weight: @btn-weight;
+  color: @btn-text;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
@@ -65,9 +65,9 @@ button, input[type=button], input[type=submit], [btn] {
   }
   
   &:not(:disabled):hover {
-    box-shadow: @button-hover-shadow;
-    background: @button-hover-back;
-    color: @button-hover;
+    box-shadow: @btn-hshadow;
+    background: @btn-hback;
+    color: @btn-htext;
     
     &:active {
       box-shadow: none;
@@ -77,24 +77,24 @@ button, input[type=button], input[type=submit], [btn] {
   
   // primary
   &[primary] {
-    border-color: @primary-border;
-    background: @primary-back;
-    color: @primary-text;
+    border-color: @bpri-borderc;
+    background: @bpri-back;
+    color: @bpri-text;
     
     &:not(:disabled):hover {
-      background: @primary-hover-back;
-      color: @primary-hover;
+      background: @bpri-hback;
+      color: @bpri-htext;
     }
   }
 
   // disabled
   &:disabled, &.disabled {
     cursor: default;
-    border-color: @disabled-border;
-    background: @disabled-back;
-    color: @disabled-text;
+    border-color: @bdis-borderc;
+    background: @bdis-back;
+    color: @bdis-text;
   }
   
   // round
-  &[round] { border-radius: @round-radius; }
+  &[round] { border-radius: @brnd-radius; }
 }

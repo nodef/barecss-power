@@ -2,27 +2,28 @@
 
 
 // config
-@bq-border: @sec-back;
+@bq-borderc: @sec-back;
+@bq-borderl: 1em;
 @bq-back: lighten(@sec-back, 10%);
 @bq-font: 1.1em;
-@bq-space: 2em;
-@bq-pad: 2em;
-@bq-padv: 1em;
-@bq-quote-font: 3em;
+@bq-marginv: 2 * @margin-s;
+@bq-padh: 2 * @pad-s;
+@bq-padv: @pad-s;
+@quote-font: 3em;
 
 
 // box
 blockquote {
-  margin: @bq-space 0;
-  border-left: 1em solid @bq-border;
-  padding: @bq-padv @bq-pad;
+  margin: @bq-marginv 0;
+  border-left: @bq-borderl solid @bq-borderc;
+  padding: @bq-padv @bq-padh;
   background: @bq-back;
   font-size: @bq-font;
 
   // open quote
   &:before {
     content: open-quote;
-    font-size: @bq-quote-font;
+    font-size: @quote-font;
     line-height: 0.5;
   }
 }

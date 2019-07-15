@@ -4,22 +4,22 @@
 // config
 @tag-font: 0.8em;
 @tag-back: .twinkle(@def-back, 10%)[x];
-@tag-border: .twinkle(@def-back, 15%)[x];
-@tag-border-size: 0.1rem;
-@tag-radius: 0.6em;
-@tag-gap: 0.3em;
-@tag-space: 0.3em;
-@tag-pad: 0.7em;
-@tag-padv: 0.1em;
+@tag-borderc: .twinkle(@def-back, 15%)[x];
+@tag-borderb: @border-s / 2;
+@tag-radius: 3 * @radius-s;
+@tag-marginr: 0.3 * @margin-s;
+@tag-marginb: @tag-marginr;
+@tag-padh: 0.7 * @pad-s;
+@tag-padv: 0.1 * @pad-s;
 
 
 tag {
   // default
   display: inline-block;
-  margin: 0 @tag-gap @tag-space 0;
-  border-bottom: @tag-border-size solid @tag-border;
+  margin: 0 @tag-marginr @tag-marginb 0;
+  border-bottom: @tag-borderb solid @tag-borderc;
   border-radius: @tag-radius;
-  padding: @tag-padv @tag-pad;
+  padding: @tag-padv @tag-padh;
   background: @tag-back;
   font-size: @tag-font;
 }

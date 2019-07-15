@@ -4,10 +4,10 @@
 // config
 @tt-back: @def-text;
 @tt-text: @def-back;
-@tt-font-family: sans-serif;
+@tt-fontf: sans-serif;
 @tt-font: 1rem;
-@tt-radius: 0.3rem;
-@tt-pad: 1rem;
+@tt-radius: 1.5 * @radius-s;
+@tt-padh: 1rem;
 @tt-padv: 0.5rem;
 @tt-opacity: 0.9;
 
@@ -26,9 +26,9 @@
     visibility: hidden;
     opacity: 0;
     border-radius: @tt-radius;
-    padding: @tt-padv @tt-pad;
+    padding: @tt-padv @tt-padh;
     background: @tt-back;
-    font: normal @tt-font @tt-font-family;
+    font: normal @tt-font @tt-fontf;
     color: @tt-text;
     text-transform: none;
     white-space: nowrap;

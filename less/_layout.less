@@ -1,20 +1,29 @@
 @import (reference) "config";
 
 
-@h-back: @def-text;
+// config
+@p-padv: @pad-l;
+@p-padh: @pad-s;
+@p-marginb: @margin-s;
+
+@hr-back: @sec-text;
+@hr-height: @border-s;
+@hr-margin: @margin-l;
 
 
+// image
 img {
   max-width: 100%;
   height: auto;
 }
 
 
+// section
 // <section>			= centered section
 // <section wide>	= wide section
 section {
   width: 100%;
-  padding: 3em 1em;
+  padding: @p-padv @p-padh;
 
   &:not([wide]) {
     max-width: @width;
@@ -23,15 +32,17 @@ section {
 }
 
 
+// paragraph
 p {
-  margin: 0 0 1em;
+  margin: 0 0 @p-marginb;
   &:last-child { margin: 0 }
 }
 
+// horizontal rule
 hr {
   width: 100%;
-  height: 2px;
-  margin: 3em 0;
+  height: @hr-height;
+  margin: @hr-margin 0;
   border: none;
-  background: @h-back;
+  background: @hr-back;
 }
