@@ -65,3 +65,8 @@
 .twinkle(@color, @percent) {
   x: if(luma(@color) < 50%, lighten(@color, @percent), darken(@color, @percent));
 }
+
+// set background to color difference
+.backdiff(@a, @b) {
+  background: difference(@a, @b);
+}

@@ -2,9 +2,9 @@
 
 
 // config
-@a-back: @sec-back;
 @a-base: 0.2;
 @a-text: inherit;
+@a-back: blue;
 
 
 // normal
@@ -16,7 +16,7 @@ a {
   
   // inside paragraph
   p &:not([btn]) {
-    &:before {
+    &::before {
       content: "";
       display: inline-block;
       position: absolute;
@@ -26,8 +26,10 @@ a {
       transform: scale3d(1,@a-base,1);
       transform-origin: bottom;
       opacity: 0.5;
-      background: @a-back;
+      background: difference(@def-back, @a-back);
     }
+    .pri &::before { background: difference(@pri-back, @a-back); }
+    .sec &::before { background: difference(@sec-back, @a-back); }
     
     // on hover
     &:hover::before { transform: none; }

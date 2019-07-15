@@ -5,6 +5,43 @@ a, button, input, menu, menuitem, textarea, select, tag, th, tr, ul, ::before, :
   transition: all 0.3s ease-in-out;
 }
 
+
+// shadow (1em)
+.anim-shadow(@x) {
+  &:hover, &:focus, &:active {
+		box-shadow: 0 @x @x -@x rgba(0, 0, 0, 0.5);
+	}
+}
+
+
+// underline
+.anim-underline(@b) {
+  position: relative;
+	overflow: hidden;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 51%;
+		right: 51%;
+		bottom: 0;
+		z-index: -1;
+		height: 4px;
+		background: @b;
+		transition-property: "left, right";
+		transition-timing-function: ease-out;
+	}
+
+	&:hover, &:focus, &:active {
+		&::before {
+			left: 0;
+			right: 0;
+		}
+  }
+}
+
+.underline { .anim-shadow(1em); }
+
 // buzz
 .buzz, .ripple {
   display: inline-block;
