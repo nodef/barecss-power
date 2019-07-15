@@ -1,25 +1,69 @@
 @import (reference) "config";
 
 
-@label-vgap: 0.6em;
+@label-space: 0.6em;
 @label-font: 1em;
-@input-vgap: 1.2em;
+@label-weight: bold;
+@label-transform: uppercase;
+
+@input-space: 1.2em;
 @input-font: 1em;
 @input-color: @pri-text;
-@input-bcolor: @grey-light;
-@radio-border: @grey-mid;
+@input-decor: darken(@def-back, 20%);
+@input-decor-size: 0.2em;
+@input-padt: 0.3em;
+@input-padb: 0.6em;
+@input-back: transparent;
+@input-weight: inherit;
+@input-hover-border: @sec-back;
+@input-hover-back: initial;
+@input-hover: @sec-text;
+
+@textarea-height: 4.8em;
+@textarea-border: darken(@def-back, 20%);
+@textarea-border-size: 0.1em;
+@textarea-radius: 0.3em;
+@textarea-pad: 1.2em;
+
+@select-height: 2.4em;
 @select-border: @grey-light;
-@textarea-border: @grey-light;
+@select-border-size: 0.1em;
+@select-radius: 0.2em;
+@select-back: #fff;
+@select-arrow: 1.2em;
+@select-font: inherit;
+@select-weight: normal;
+@select-indent: 0.3em;
+@select-hover: initial;
+@select-hover-back: initial;
+@select-hover-border: @pri-back;
+
+@choice-width: 1.2em;
+@choice-height: 1.2em;
+@choice-border-size: 0.1em;
+@choice-back: #fff;
+
+@radio-font: inherit;
+@radio-weight: 200;
+@radio-hover-border: @pri-back;
+@radio-hover-back: @pri-back;
+@radio-border-size: 0.1em;
+
+@checkbox-font: inherit;
+@checkbox-weight: 200;
+@checkbox-radius: 0.2em;
+@checkbox-hover-border: @pri-back;
+@checkbox-hover-back: @pri-back;
 
 
-  // labels
+// labels
 label {
   display: inline-block;
   width: 100%;
-  margin-top: @label-vgap;
+  margin-top: @label-space;
   font-size: @label-font;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-weight: @label-weight;
+  text-transform: @label-transform;
   
   &:first-child { margin-top: 0 }
 }
@@ -27,74 +71,73 @@ label {
 .mx-input() {
   display: inline-block;
   width: 100%;
-  margin-bottom: @input-vgap;
+  margin-bottom: @input-space;
   border: none;
   border-radius: 0;
-  border-bottom: 2px solid @input-bcolor;
-  padding: 0.3em 0 0.6em;
-  background: transparent;
+  border-bottom: @input-decor-size solid @input-decor;
+  padding: @input-padt 0 @input-padb;
+  background: @input-back;
   font-size: @input-font;
-  // font-weight: 300;
+  font-weight: @input-weight;
   
-  &:focus,
-  &:hover {
+  &:focus, &:hover {
     outline: 0;
-    border-color: @sec-back;
-    color: @input-color;
+    border-color: @input-hover-border;
+    background: @input-hover-back;
+    color: @input-hover;
   }
 }
 
-  // text fields
+// text fields
 input:not([type=radio]):not([type=checkbox]):not([type=button]):not([type=submit]) {
-  & { .mx-input }
+  .mx-input();
 }
 
 textarea {
-  .mx-input;
-  
-  min-height: 4.8em;
-  border-right: 1px solid @textarea-border;
-  border-bottom-right-radius: 0.3em;
-  padding-right: 1.2em;
+  .mx-input();
+  min-height: @textarea-height;
+  border-right: @textarea-border-size solid @textarea-border;
+  border-bottom-right-radius: @textarea-radius;
+  padding-right: @textarea-pad;
 }
 
 
-  // select
+// select
 select {
   cursor: pointer;
   appearance: none;
   display: block;
   width: 100%;
-  height: 2.4em;
-  border: 1px solid @select-border;
-  border-radius: 2px;
+  height: @select-height;
+  border: @select-border-size solid @select-border;
+  border-radius: @select-radius;
   margin: 0.3em 0 1.2em;
   padding: 0.3em 1.8em 0.3em 0.6em;
-  background: #fff data-uri('../icons/chevron-down.svg') no-repeat right 0.6em center;
-  background-size: 1.2em;
-  font-size: inherit; // @fs-m;
-  font-weight: 300;
-  text-indent: 0.3em;
+  background: @select-back data-uri('../icons/chevron-down.svg') no-repeat right 0.6em center;
+  background-size: @select-arrow;
+  font-size: @select-font;
+  font-weight: @select-weight;
+  text-indent: @select-indent;
   
-  &:focus,
-  &:hover {
+  &:focus, &:hover {
     outline: 0;
-    border-color: @pri-back;
+    background-color: @select-hover-back;
+    border-color: @select-hover-border;
+    color: @select-hover;
   }
 }
 
 
-  // radio and checkboxes
+// radio and checkboxes
 input {
-  &[type=radio],
-  &[type=checkbox] {
+  &[type=radio], &[type=checkbox] {
     & {
       cursor: pointer;
-      width: 1.2em;
-      height: 1.2em;
+      width: @choice-width;
+      height: @choice-height;
       z-index: 2;
       opacity: 0;
-      margin-right: -1.2em;
+      margin-right: -@choice-width;
       vertical-align: middle;
       
       // note that the label must be placed after the radio or checkbox tag
@@ -105,11 +148,11 @@ input {
         &:before {
           content: "";
           display: inline-block;
-          width: 1.2em;
-          height: 1.2em;
-          margin-right: 0.6em;
-          border: 1px solid @radio-border;
-          background: #fff;
+          width: @choice-width;
+          height: @choice-height;
+          margin-right: @choice-width / 2;
+          border: @choice-border-size solid @choice-border;
+          background: @choice-back;
           vertical-align: middle;
         }
         
@@ -119,8 +162,8 @@ input {
           position: absolute;
           top: 4px;
           left: 2px;
-          width: 1.1em;
-          height: 1.1em;
+          width: @choice-width - 0.1;
+          height: @choice-width - 0.1;
           transform: scale(0);
           visibility: hidden;
           opacity: 0;
@@ -134,16 +177,16 @@ input {
   // eg: <input type="radio" name="radio" id="radio-1"> <label for="radio-1">Select me</label>
   &[type=radio] {
     + label {
-      font-size: inherit; // @fs-m;
-      font-weight: 200;
+      font-size: @radio-font;
+      font-weight: @radio-weight;
       
       &:before { border-radius: 100% }
     }
     
     &:checked + label {
       &:before {
-        border-color: @pri-back;
-        background: @pri-back;
+        border-color: @radio-hover-border;
+        background: @radio-hover-back;
       }
       
       &:after {
@@ -151,9 +194,9 @@ input {
         transform: scale(1);
         visibility: visible;
         opacity: 1;
-        border: 1px solid @pri-text;
+        border: @radio-border-size solid @radio-hover-border;
         border-radius: 100%;
-        background: @pri-back;
+        background: @radio-hover-back;
       }
     }
   }
@@ -163,10 +206,10 @@ input {
   // eg: <input type="checkbox" id="checkbox-1"> <label for="checkbox-1">Check me</label>
   &[type=checkbox] {
     + label {
-      font-size: inherit; // @fs-m;
-      font-weight: 200;
-      
-      &:before { border-radius: 2px }
+      font-size: @checkbox-font;
+      font-weight: @checkbox-weight;
+  
+      &:before { border-radius: @checkbox-radius; }
       
       &:after {
         border-radius: 100%;
@@ -178,8 +221,8 @@ input {
     &:checked {
       + label {
         &:before {
-          border-color: @pri-back;
-          background: @pri-back;
+          border-color: @checkbox-hover-border;
+          background: @checkbox-hover-back;
         }
         
         &:after {
